@@ -1,6 +1,7 @@
 <script setup>
 import ProfileCard from "../components/ProfileCard.vue";
 import MainContent from "../components/MainContent.vue";
+import ContactInfo from "@/components/ContactInfo.vue";
 </script>
 
 <template>
@@ -13,7 +14,7 @@ import MainContent from "../components/MainContent.vue";
     >
       <template #sidebar-content>
         <!-- Add additional sidebar content here -->
-        <!-- For example: contact info, skills, social links, etc. -->
+         <ContactInfo/>
       </template>
     </ProfileCard>
 
