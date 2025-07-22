@@ -21,7 +21,7 @@
         <span class="contact-value">Phnom Penh City</span>
       </div>
     </div>
-    <div style="display: flex; justify-content: center;">
+    <div class="social-container">
       <ul class="social-list">
         <li><font-awesome-icon :icon="['fab', 'github']" /></li>
         <li><font-awesome-icon :icon="['fab', 'linkedin']" /></li>
@@ -43,13 +43,26 @@ export default {
 .contact-container {
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 24px;
+  overflow: hidden;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 16px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 15px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  transition: all 0.3s ease;
+}
+
+.contact-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(99, 102, 241, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.2);
 }
 
 .icon-box {
@@ -59,8 +72,9 @@ export default {
   width: 48px;
   height: 48px;
   border-radius: 12px;
-  background: linear-gradient(45deg, #f0f0f0, #cacaca);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
   flex-shrink: 0;
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
 }
 
 .contact-info {
@@ -70,21 +84,30 @@ export default {
 }
 
 .contact-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
-  color: #666;
-  letter-spacing: 0.5px;
+  color: #9ca3af;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .contact-value {
   font-size: 14px;
-  color: #333;
+  color: #e5e7eb;
+  font-weight: 500;
 }
 
 .contact-icon {
   width: 18px;
   height: 18px;
-  color: #066666;
+  color: white;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0 10px;
 }
 
 .social-list {
@@ -100,32 +123,56 @@ export default {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 32px;
-  height: 32px;
-  border-radius: 8px;
-  background: linear-gradient(45deg, #202020, #1f1d1d);
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.1) 0%,
+    rgba(139, 92, 246, 0.1) 100%
+  );
+  border: 1px solid rgba(99, 102, 241, 0.2);
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .social-list li:hover {
-  transform: scale(1.1);
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-color: rgba(99, 102, 241, 0.5);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
 }
 
 .social-list svg {
-  width: 16px;
-  height: 16px;
-  color: #ffffff;
+  width: 18px;
+  height: 18px;
+  color: #9ca3af;
+  transition: color 0.3s ease;
+}
+
+.social-list li:hover svg {
+  color: white;
 }
 
 @media (max-width: 768px) {
   .contact-item {
     gap: 12px;
+    padding: 12px;
   }
 
   .icon-box {
     width: 40px;
     height: 40px;
+  }
+
+  .social-list li {
+    width: 36px;
+    height: 36px;
+  }
+
+  .social-list svg {
+    width: 16px;
+    height: 16px;
   }
 }
 </style>

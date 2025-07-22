@@ -22,11 +22,14 @@ defineProps({
 <style scoped>
 .main-content {
   flex: 1;
-  min-height: 400px;
-  border: 1px solid #514f4f;
+  min-height: 600px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 30px;
-  padding: 20px;
-  background-color: var(--color-background);
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(10px);
+  color: #f9fafb;
+  padding: 0;
+  overflow: hidden;
 }
 
 .placeholder {
@@ -36,22 +39,30 @@ defineProps({
   justify-content: center;
   height: 100%;
   text-align: center;
-  color: var(--color-text);
+  color: #d1d5db;
+  padding: 2rem;
 }
 
 .placeholder h2 {
   margin-bottom: 10px;
-  color: var(--color-heading);
+  color: #f9fafb;
 }
 
 .placeholder p {
-  color: var(--color-text);
-  opacity: 0.7;
+  color: #9ca3af;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    min-height: 500px;
+  }
 }
 
 @media (max-width: 480px) {
   .main-content {
-    padding: 15px;
+    min-height: 400px;
+    padding: 0;
   }
 }
 </style>
