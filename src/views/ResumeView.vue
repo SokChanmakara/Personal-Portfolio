@@ -1,23 +1,15 @@
 <template>
-  <div class="min-h-screen bg-gradient-to-br from-slate-900 via-gray-900 to-slate-800 text-white">
+  <div class="min-h-screen text-white">
     <div class="container mx-auto px-6 py-16">
       <!-- Header Section -->
       <div class="text-center mb-16">
         <div class="relative">
-          <h1 class="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-emerald-400 bg-clip-text text-transparent">
+          <h1
+            class="text-6xl font-bold mb-6 bg-gradient-to-r from-blue-400 via-purple-500 to-emerald-400 bg-clip-text text-transparent"
+          >
             Resume
           </h1>
-          <div class="absolute inset-x-0 -bottom-2 h-1 bg-gradient-to-r from-blue-400 via-purple-500 to-emerald-400 rounded-full mx-auto w-32"></div>
         </div>
-        <p class="text-xl text-gray-300 max-w-3xl mx-auto mb-8 mt-8">
-          A comprehensive overview of my professional experience, education, and
-          skills
-        </p>
-        <!-- Download Button -->
-        <button class="bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
-          <i class="fas fa-download mr-2"></i>
-          Download PDF
-        </button>
       </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
@@ -26,36 +18,28 @@
           <!-- Professional Experience -->
           <section class="group">
             <div class="flex items-center mb-8">
-              <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center mr-4">
-                <i class="fas fa-briefcase text-white text-lg"></i>
-              </div>
-              <h2 class="text-3xl font-bold text-blue-400">
-                Professional Experience
-              </h2>
+              <h2 class="text-3xl font-bold text-blue-400">Experience</h2>
             </div>
 
             <!-- Job 1 -->
             <div class="experience-item">
               <div class="experience-header">
-                <h3 class="text-xl font-bold">Senior Full Stack Developer</h3>
+                <h3 class="text-xl font-bold">Freelance Developer</h3>
                 <div class="company-info">
-                  <span class="company-name">TechCorp Solutions</span>
-                  <span class="duration">2023 - Present</span>
+                  <span class="company-name">Codera Club</span>
+                  <span class="duration">May 2025 - Present</span>
                 </div>
               </div>
               <ul class="experience-details">
+                <li>Mobile Developer for Codera Club</li>
+                <li>Have Experience build an Education App</li>
                 <li>
-                  Led development of enterprise-level web applications serving
-                  10,000+ users
+                  Applied state management using Provider/Riverpod to ensure
+                  responsive and maintainable UI logic.
                 </li>
                 <li>
-                  Implemented microservices architecture improving system
-                  performance by 40%
-                </li>
-                <li>Mentored junior developers and conducted code reviews</li>
-                <li>
-                  Collaborated with cross-functional teams to deliver projects
-                  on time
+                  Collaborated with backend developers to consume REST APIs for
+                  dynamic content.
                 </li>
               </ul>
             </div>
@@ -63,20 +47,24 @@
             <!-- Job 2 -->
             <div class="experience-item">
               <div class="experience-header">
-                <h3 class="text-xl font-bold">Full Stack Developer</h3>
+                <h3 class="text-xl font-bold">IT Support Internship</h3>
                 <div class="company-info">
-                  <span class="company-name">Digital Innovations Ltd</span>
-                  <span class="duration">2022 - 2023</span>
+                  <span class="company-name">SNKRP</span>
+                  <span class="duration">Aug 2024 - Oct 2024</span>
                 </div>
               </div>
               <ul class="experience-details">
                 <li>
-                  Developed responsive web applications using Vue.js and Node.js
+                  Helped setup and maintain employee records on the server.
                 </li>
-                <li>Integrated third-party APIs and payment gateways</li>
-                <li>Optimized database queries reducing load times by 60%</li>
                 <li>
-                  Participated in agile development processes and daily standups
+                  Hands-On Experienced in using Synology server for storage and
+                  file management.
+                </li>
+                <li>
+                  Configured network infrastructure including Wi-Fi, routers,
+                  subnets, and DNS; implemented social media access restrictions
+                  for the company.
                 </li>
               </ul>
             </div>
@@ -84,22 +72,19 @@
             <!-- Job 3 -->
             <div class="experience-item">
               <div class="experience-header">
-                <h3 class="text-xl font-bold">Frontend Developer</h3>
+                <h3 class="text-xl font-bold">Content Writer</h3>
                 <div class="company-info">
-                  <span class="company-name">StartupHub</span>
-                  <span class="duration">2021 - 2022</span>
+                  <span class="company-name">Westec Media</span>
+                  <span class="duration">Jan 2023 - Oct 2024</span>
                 </div>
               </div>
               <ul class="experience-details">
+                <li>Collect and Analyse movies source</li>
                 <li>
-                  Built modern, responsive user interfaces using React and
-                  Vue.js
+                  Make Recommendations on improvement based on my analysis and
+                  write a content
                 </li>
-                <li>
-                  Collaborated with designers to implement pixel-perfect designs
-                </li>
-                <li>Improved website performance and accessibility scores</li>
-                <li>Maintained and updated existing codebases</li>
+                <li>Communication and Teamwork</li>
               </ul>
             </div>
           </section>
@@ -107,60 +92,44 @@
           <!-- Education -->
           <section class="group">
             <div class="flex items-center mb-8">
-              <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full flex items-center justify-center mr-4">
-                <i class="fas fa-graduation-cap text-white text-lg"></i>
-              </div>
               <h2 class="text-3xl font-bold text-green-400">Education</h2>
             </div>
 
             <div class="education-item">
               <div class="education-header">
                 <h3 class="text-xl font-bold">
-                  Bachelor of Science in Computer Science
+                  Information and Communication Engineering
                 </h3>
                 <div class="education-info">
-                  <span class="university">University of Technology</span>
-                  <span class="duration">2017 - 2021</span>
+                  <span class="university">Institute of Technology of Cambodia</span>
+                  <span class="duration">2021 - Present</span>
                 </div>
               </div>
               <p class="education-details">
-                Graduated with honors. Relevant coursework: Data Structures,
-                Algorithms, Web Development, Database Systems, Software
+                Relevant coursework: Data Structures,
+                Algorithms, Web Development, MObile Devlopement, Database Systems, Software
                 Engineering.
+              </p>
+            </div>
+          </section> 
+          <!-- Diploma -->
+          <section class="group">
+            <div class="education-item">
+              <div class="education-header">
+                <h3 class="text-xl font-bold">
+                  High School
+                </h3>
+                <div class="education-info">
+                  <span class="university">Sonthormok High School</span>
+                  <span class="duration">2018 - 2021</span>
+                </div>
+              </div>
+              <p class="education-details">
+                General knowledge
               </p>
             </div>
           </section>
 
-          <!-- Certifications -->
-          <section class="group">
-            <div class="flex items-center mb-8">
-              <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center mr-4">
-                <i class="fas fa-certificate text-white text-lg"></i>
-              </div>
-              <h2 class="text-3xl font-bold text-purple-400">
-                Certifications
-              </h2>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div class="certification-item">
-                <h3 class="font-bold">AWS Certified Developer</h3>
-                <p class="text-gray-400">Amazon Web Services • 2023</p>
-              </div>
-              <div class="certification-item">
-                <h3 class="font-bold">Vue.js 3 Certification</h3>
-                <p class="text-gray-400">Vue School • 2023</p>
-              </div>
-              <div class="certification-item">
-                <h3 class="font-bold">Google Analytics Certified</h3>
-                <p class="text-gray-400">Google • 2022</p>
-              </div>
-              <div class="certification-item">
-                <h3 class="font-bold">Scrum Master Certified</h3>
-                <p class="text-gray-400">Scrum Alliance • 2022</p>
-              </div>
-            </div>
-          </section>
         </div>
 
         <!-- Right Column -->
@@ -168,9 +137,6 @@
           <!-- Skills -->
           <section class="sticky top-8">
             <div class="flex items-center mb-6">
-              <div class="w-10 h-10 bg-gradient-to-r from-orange-500 to-red-500 rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-cogs text-white"></i>
-              </div>
               <h2 class="text-2xl font-bold">Technical Skills</h2>
             </div>
 
@@ -180,25 +146,31 @@
                 <div class="skill-item">
                   <span>Vue.js</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 95%"></div>
+                    <div class="skill-progress" style="width: 70%"></div>
                   </div>
                 </div>
                 <div class="skill-item">
-                  <span>React</span>
-                  <div class="skill-bar">
-                    <div class="skill-progress" style="width: 90%"></div>
-                  </div>
-                </div>
-                <div class="skill-item">
-                  <span>TypeScript</span>
+                  <span>HTML</span>
                   <div class="skill-bar">
                     <div class="skill-progress" style="width: 85%"></div>
                   </div>
                 </div>
                 <div class="skill-item">
+                  <span>CSS</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 75%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
+                  <span>JavaScript</span>
+                  <div class="skill-bar">
+                    <div class="skill-progress" style="width: 70%"></div>
+                  </div>
+                </div>
+                <div class="skill-item">
                   <span>Tailwind CSS</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 92%"></div>
+                    <div class="skill-progress" style="width: 65%"></div>
                   </div>
                 </div>
               </div>
@@ -210,11 +182,11 @@
                 <div class="skill-item">
                   <span>Node.js</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 88%"></div>
+                    <div class="skill-progress" style="width: 60%"></div>
                   </div>
                 </div>
                 <div class="skill-item">
-                  <span>Python</span>
+                  <span>Laravel</span>
                   <div class="skill-bar">
                     <div class="skill-progress" style="width: 82%"></div>
                   </div>
@@ -222,7 +194,7 @@
                 <div class="skill-item">
                   <span>Express.js</span>
                   <div class="skill-bar">
-                    <div class="skill-progress" style="width: 85%"></div>
+                    <div class="skill-progress" style="width: 70%"></div>
                   </div>
                 </div>
                 <div class="skill-item">
@@ -240,7 +212,7 @@
               </h3>
               <div class="skill-list">
                 <div class="skill-item">
-                  <span>MongoDB</span>
+                  <span>MySQL</span>
                   <div class="skill-bar">
                     <div class="skill-progress" style="width: 80%"></div>
                   </div>
@@ -268,23 +240,11 @@
           </section>
 
           <!-- Languages -->
-          <section>
+          <section class="language-section">
             <div class="flex items-center mb-6">
-              <div class="w-10 h-10 bg-gradient-to-r from-indigo-500 to-blue-500 rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-globe text-white"></i>
-              </div>
               <h2 class="text-2xl font-bold">Languages</h2>
             </div>
             <div class="space-y-4">
-              <div class="language-item">
-                <div class="flex justify-between mb-2">
-                  <span>English</span>
-                  <span class="text-gray-400">Fluent</span>
-                </div>
-                <div class="skill-bar">
-                  <div class="skill-progress" style="width: 95%"></div>
-                </div>
-              </div>
               <div class="language-item">
                 <div class="flex justify-between mb-2">
                   <span>Khmer</span>
@@ -296,11 +256,20 @@
               </div>
               <div class="language-item">
                 <div class="flex justify-between mb-2">
+                  <span>English</span>
+                  <span class="text-gray-400">Fluent</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-progress" style="width: 90%"></div>
+                </div>
+              </div>
+              <div class="language-item">
+                <div class="flex justify-between mb-2">
                   <span>French</span>
                   <span class="text-gray-400">Basic</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-progress" style="width: 40%"></div>
+                  <div class="skill-progress" style="width: 20%"></div>
                 </div>
               </div>
             </div>
@@ -309,9 +278,6 @@
           <!-- Interests -->
           <section>
             <div class="flex items-center mb-6">
-              <div class="w-10 h-10 bg-gradient-to-r from-pink-500 to-rose-500 rounded-full flex items-center justify-center mr-3">
-                <i class="fas fa-heart text-white"></i>
-              </div>
               <h2 class="text-2xl font-bold">Interests</h2>
             </div>
             <div class="flex flex-wrap gap-3">
@@ -354,37 +320,45 @@ const skillsVisible = ref(false);
 
 onMounted(() => {
   // Add intersection observer for skill bars animation
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        entry.target.style.transform = 'translateY(0)';
-        
-        // Animate skill bars when they come into view
-        if (entry.target.classList.contains('skill-category')) {
-          skillsVisible.value = true;
-          const skillBars = entry.target.querySelectorAll('.skill-progress');
-          skillBars.forEach((bar, index) => {
-            setTimeout(() => {
-              bar.style.animation = 'fillBar 1.5s ease-out forwards';
-            }, index * 100);
-          });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+
+          // Animate skill bars when they come into view
+          if (
+            entry.target.classList.contains("skill-category") ||
+            entry.target.classList.contains("language-section")
+          ) {
+            skillsVisible.value = true;
+            const skillBars = entry.target.querySelectorAll(".skill-progress");
+            skillBars.forEach((bar, index) => {
+              setTimeout(() => {
+                bar.style.animation = "fillBar 1.5s ease-out forwards";
+              }, index * 100);
+            });
+          }
         }
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
-  });
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -100px 0px",
+    }
+  );
 
   // Observe all sections
-  const sections = document.querySelectorAll('.experience-item, .education-item, .certification-item, .skill-category');
+  const sections = document.querySelectorAll(
+    ".experience-item, .education-item, .certification-item, .skill-category, .language-section"
+  );
   sections.forEach((section) => {
     observer.observe(section);
   });
 
   // Add CSS for skill bar animation
-  const style = document.createElement('style');
+  const style = document.createElement("style");
   style.textContent = `
     @keyframes fillBar {
       from {
@@ -399,11 +373,11 @@ onMounted(() => {
 
   // Set CSS custom properties for skill bar widths
   setTimeout(() => {
-    const skillBars = document.querySelectorAll('.skill-progress');
+    const skillBars = document.querySelectorAll(".skill-progress");
     skillBars.forEach((bar) => {
       const width = bar.style.width;
-      bar.style.setProperty('--target-width', width);
-      bar.style.width = '0';
+      bar.style.setProperty("--target-width", width);
+      bar.style.width = "0";
     });
   }, 100);
 });
@@ -412,7 +386,12 @@ onMounted(() => {
 <style scoped>
 .experience-item,
 .education-item {
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.8), rgba(30, 41, 59, 0.8));
+  margin-top: 16px;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.8),
+    rgba(30, 41, 59, 0.8)
+  );
   backdrop-filter: blur(10px);
   padding: 2.5rem;
   border-radius: 1.5rem;
@@ -433,7 +412,7 @@ onMounted(() => {
 
 .experience-item::before,
 .education-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -517,7 +496,11 @@ onMounted(() => {
 }
 
 .certification-item {
-  background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(17, 24, 39, 0.9),
+    rgba(31, 41, 55, 0.9)
+  );
   backdrop-filter: blur(10px);
   padding: 2rem;
   border-radius: 1rem;
@@ -534,7 +517,7 @@ onMounted(() => {
 }
 
 .certification-item::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -551,7 +534,12 @@ onMounted(() => {
 .skill-category {
   margin-bottom: 3rem;
   padding: 2rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.6), rgba(30, 41, 59, 0.6));
+  margin-top:1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.6),
+    rgba(30, 41, 59, 0.6)
+  );
   backdrop-filter: blur(10px);
   border-radius: 1.5rem;
   border: 1px solid rgba(148, 163, 184, 0.1);
@@ -601,25 +589,38 @@ onMounted(() => {
 }
 
 .skill-progress::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
   animation: shimmer 2s infinite;
 }
 
 @keyframes shimmer {
-  0% { left: -100%; }
-  100% { left: 100%; }
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 .language-item {
   margin-bottom: 1.5rem;
   padding: 1rem;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.4), rgba(30, 41, 59, 0.4));
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.4),
+    rgba(30, 41, 59, 0.4)
+  );
   border-radius: 1rem;
   border: 1px solid rgba(148, 163, 184, 0.1);
   transition: all 0.3s ease;
@@ -631,7 +632,11 @@ onMounted(() => {
 }
 
 .interest-tag {
-  background: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(31, 41, 55, 0.9));
+  background: linear-gradient(
+    135deg,
+    rgba(17, 24, 39, 0.9),
+    rgba(31, 41, 55, 0.9)
+  );
   backdrop-filter: blur(10px);
   color: rgb(226, 232, 240);
   padding: 0.75rem 1.5rem;
@@ -649,7 +654,11 @@ onMounted(() => {
   transform: translateY(-2px) scale(1.05);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
   border-color: rgba(236, 72, 153, 0.4);
-  background: linear-gradient(135deg, rgba(236, 72, 153, 0.2), rgba(219, 39, 119, 0.2));
+  background: linear-gradient(
+    135deg,
+    rgba(236, 72, 153, 0.2),
+    rgba(219, 39, 119, 0.2)
+  );
 }
 
 .interest-tag i {
@@ -663,9 +672,15 @@ onMounted(() => {
   animation: fadeInUp 0.8s ease forwards;
 }
 
-.group:nth-child(1) { animation-delay: 0.1s; }
-.group:nth-child(2) { animation-delay: 0.2s; }
-.group:nth-child(3) { animation-delay: 0.3s; }
+.group:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.group:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.group:nth-child(3) {
+  animation-delay: 0.3s;
+}
 
 @keyframes fadeInUp {
   from {
@@ -711,9 +726,15 @@ onMounted(() => {
     animation: slideInFromLeft 0.8s ease forwards;
   }
 
-  .experience-item:nth-child(1) { animation-delay: 0.1s; }
-  .experience-item:nth-child(2) { animation-delay: 0.2s; }
-  .experience-item:nth-child(3) { animation-delay: 0.3s; }
+  .experience-item:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .experience-item:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .experience-item:nth-child(3) {
+    animation-delay: 0.3s;
+  }
 }
 
 @keyframes slideInFromLeft {

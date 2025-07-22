@@ -23,11 +23,29 @@
     </div>
     <div class="social-container">
       <ul class="social-list">
-        <li><font-awesome-icon :icon="['fab', 'github']" /></li>
-        <li><font-awesome-icon :icon="['fab', 'linkedin']" /></li>
-        <li><font-awesome-icon :icon="['fab', 'twitter']" /></li>
-        <li><font-awesome-icon :icon="['fab', 'instagram']" /></li>
-        <li><font-awesome-icon :icon="['fab', 'google']" /></li>
+        <li>
+          <a
+            href="https://github.com/SokChanmakara"
+            target="_blank"
+            rel="noopener"
+          >
+            <font-awesome-icon :icon="['fab', 'github']" />
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/sok-chanmakara-3a6300307/"
+            target="_blank"
+            rel="noopener"
+          >
+            <font-awesome-icon :icon="['fab', 'linkedin']" />
+          </a>
+        </li>
+        <li>
+          <a href="https://t.me/Chanmakaraaa" target="_blank" rel="noopener">
+            <font-awesome-icon icon="fa-brands fa-telegram" />
+          </a>
+        </li>
       </ul>
     </div>
   </div>

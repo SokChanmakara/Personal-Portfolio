@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <div class="text-center mb-16" :class="{ 'animate-fade-in': isVisible }">
       <h1
-        class="text-5xl font-bold mb-10 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent header-title"
+        class="text-5xl font-bold mb-20 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent header-title"
       >
         About Me
       </h1>
@@ -78,7 +78,7 @@
         <!-- Planning & Strategy -->
         <div class="pathway-card">
           <div class="pathway-icon">
-            <i class="fas fa-search text-2xl"></i>
+            <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="text-2xl"/>
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -94,7 +94,7 @@
         <!-- Pixel-Perfect UI/UX Design -->
         <div class="pathway-card">
           <div class="pathway-icon design">
-            <i class="fas fa-palette text-2xl"></i>
+            <font-awesome-icon icon="fa-solid fa-palette" class="text-2xl"/>
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -110,7 +110,7 @@
         <!-- Efficient Development & Seamless Integration -->
         <div class="pathway-card">
           <div class="pathway-icon development">
-            <i class="fas fa-code text-2xl"></i>
+            <font-awesome-icon icon="fa-solid fa-code" class="text-2xl" />
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -128,7 +128,7 @@
         <!-- Launch & Post-Launch Support -->
         <div class="pathway-card">
           <div class="pathway-icon launch">
-            <i class="fas fa-rocket text-2xl"></i>
+            <font-awesome-icon icon="fa-solid fa-rocket" class="text-2xl"/>
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -256,6 +256,7 @@ function animateCounter(element) {
 }
 
 .intro-text {
+  margin-top: 16px;
   animation: slideInFromLeft 1s ease-out 0.6s both;
 }
 

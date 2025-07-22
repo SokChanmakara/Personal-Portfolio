@@ -23,52 +23,76 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag html">
-                <i class="fab fa-html5"></i>
+                <img
+                  src="../assets/ImageIcon/html.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 HTML
               </span>
               <span class="skill-tag css">
-                <i class="fab fa-css3-alt"></i>
+                <img src="../assets/ImageIcon/css.svg" alt="" class="w-8 h-8" />
                 CSS
               </span>
               <span class="skill-tag javascript">
-                <i class="fab fa-js-square"></i>
+                <img
+                  src="../assets/ImageIcon/javascript.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 JavaScript
               </span>
               <span class="skill-tag python">
-                <i class="fab fa-python"></i>
+                <img
+                  src="../assets/ImageIcon/python.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Python
               </span>
               <span class="skill-tag vuejs">
-                <i class="fab fa-vuejs"></i>
+                <img src="../assets/ImageIcon/vue.svg" alt="" class="w-8 h-8" />
                 VueJS
               </span>
               <span class="skill-tag laravel">
-                <i class="fab fa-laravel"></i>
+                <img
+                  src="../assets/ImageIcon/laravel.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Laravel
               </span>
               <span class="skill-tag flutter">
-                <i class="fab fa-flutter"></i>
+                <img
+                  src="../assets/ImageIcon/flutter.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Flutter
               </span>
               <span class="skill-tag nestjs">
-                <i class="fas fa-server"></i>
+                <img
+                  src="../assets/ImageIcon/nestjs.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 NestJs
               </span>
               <span class="skill-tag tailwindcss">
-                <i class="fas fa-wind"></i>
+                <img
+                  src="../assets/ImageIcon/tailwindcss.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 TailwindCSS
               </span>
               <span class="skill-tag java">
-                <i class="fab fa-java"></i>
+                <img
+                  src="../assets/ImageIcon/java.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Java
-              </span>
-              <span class="skill-tag c">
-                <i class="fas fa-code"></i>
-                C
-              </span>
-              <span class="skill-tag cpp">
-                <i class="fas fa-code"></i>
-                C++
               </span>
             </div>
           </div>
@@ -85,11 +109,19 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag riverpod">
-                <i class="fas fa-water"></i>
+                <img
+                  src="../assets/ImageIcon/riverpod.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Riverpod
               </span>
               <span class="skill-tag pinia">
-                <i class="fab fa-vuejs"></i>
+                <img
+                  src="../assets/ImageIcon/pinia.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Pinia
               </span>
             </div>
@@ -107,19 +139,31 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag rest">
-                <i class="fas fa-server"></i>
+                <img src="../assets/ImageIcon/api.svg" alt="" class="w-8 h-8" />
                 REST API
               </span>
               <span class="skill-tag graphql">
-                <i class="fas fa-project-diagram"></i>
+                <img
+                  src="../assets/ImageIcon/graphql.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 GraphQL
               </span>
               <span class="skill-tag postman">
-                <i class="fas fa-mail-bulk"></i>
+                <img
+                  src="../assets/ImageIcon/postman.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Postman
               </span>
               <span class="skill-tag apidog">
-                <i class="fas fa-dog"></i>
+                <img
+                  src="../assets/ImageIcon/apidog.png"
+                  alt=""
+                  class="w-8 h-8 rounded-lg"
+                />
                 ApiDog
               </span>
             </div>
@@ -137,11 +181,19 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag bakong">
-                <i class="fas fa-credit-card"></i>
+                <img
+                  src="../assets/ImageIcon/bakong.png"
+                  alt=""
+                  class="w-8 h-8 rounded-lg"
+                />
                 Bakong
               </span>
               <span class="skill-tag stripe">
-                <i class="fab fa-stripe"></i>
+                <img
+                  src="../assets/ImageIcon/stripe.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Stripe
               </span>
             </div>
@@ -159,23 +211,23 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag localstorage">
-                <i class="fas fa-hdd"></i>
+                <img src="../assets/ImageIcon/storage.svg" alt="" class="w-8 h-8" />
                 Local Storage
               </span>
               <span class="skill-tag sqlite">
-                <i class="fas fa-database"></i>
+                <img src="../assets/ImageIcon/sqlite.svg" alt="" class="w-8 h-8" />
                 SQLite
               </span>
               <span class="skill-tag hive">
-                <i class="fas fa-cube"></i>
+                <img src="../assets/ImageIcon/hive.svg" alt="" class="w-8 h-8" />
                 Hive
               </span>
               <span class="skill-tag mysql">
-                <i class="fas fa-database"></i>
+                <img src="../assets/ImageIcon/mysql.svg" alt="" class="w-8 h-8" />
                 MySQL
               </span>
               <span class="skill-tag postgresql">
-                <i class="fas fa-database"></i>
+                <img src="../assets/ImageIcon/postgreql.svg" alt="" class="w-8 h-8" />
                 PostgreSQL
               </span>
             </div>
@@ -192,15 +244,15 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag git">
-                <i class="fab fa-git-alt"></i>
+                <img src="../assets/ImageIcon/git.svg" alt="" class="w-8 h-8" />
                 Git
               </span>
               <span class="skill-tag github">
-                <i class="fab fa-github"></i>
+                <img src="../assets/ImageIcon/github.svg" alt="" class="w-8 h-8" />
                 Github
               </span>
               <span class="skill-tag gitlab">
-                <i class="fab fa-gitlab"></i>
+                <img src="../assets/ImageIcon/gitlab.svg" alt="" class="w-8 h-8" />
                 Gitlab
               </span>
             </div>
@@ -217,28 +269,32 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag vscode">
-                <i class="fas fa-code"></i>
+                <img src="../assets/ImageIcon/vscode.svg" alt="" class="w-8 h-8" />
                 Visual Studio Code
               </span>
               <span class="skill-tag android-studio">
-                <i class="fab fa-android"></i>
+                <img src="../assets/ImageIcon/androidstudio.svg" alt="" class="w-8 h-8" />
                 Android Studio
               </span>
               <span class="skill-tag docker">
-                <i class="fab fa-docker"></i>
+                <img src="../assets/ImageIcon/docker.svg" alt="" class="w-8 h-8" />
                 Docker
               </span>
               <span class="skill-tag jenkins">
-                <i class="fas fa-cogs"></i>
+                <img src="../assets/ImageIcon/jenkins.svg" alt="" class="w-8 h-8" />
                 Jenkins
               </span>
               <span class="skill-tag kubernetes">
-                <i class="fas fa-cloud"></i>
+                <img src="../assets/ImageIcon/k8s.svg" alt="" class="w-8 h-8" />
                 Kubernetes
               </span>
               <span class="skill-tag minio">
-                <i class="fas fa-cloud-upload-alt"></i>
+                <img src="../assets/ImageIcon/minio.svg" alt="" class="w-8 h-8" />
                 MinIO
+              </span>
+              <span class="skill-tag minio">
+                <img src="../assets/ImageIcon/dbeaver.svg" alt="" class="w-8 h-8" />
+                Dbeaver
               </span>
             </div>
           </div>
@@ -254,15 +310,15 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag figma">
-                <i class="fab fa-figma"></i>
+                <img src="../assets/ImageIcon/figma.svg" alt="" class="w-8 h-8" />
                 Figma
               </span>
               <span class="skill-tag balsamiq">
-                <i class="fas fa-drafting-compass"></i>
+                <img src="../assets/ImageIcon/balsamiq.png" alt="" class="w-8 h-8" />
                 Balsamiq
               </span>
               <span class="skill-tag canva">
-                <i class="fas fa-paint-brush"></i>
+                <img src="../assets/ImageIcon/canva.svg" alt="" class="w-8 h-8" />
                 Canva
               </span>
             </div>
@@ -709,7 +765,7 @@ onMounted(() => {
 }
 
 .skill-tag.github {
-  border-color: rgba(36, 41, 46, 0.4);
+  border-color: rgba(23, 122, 221, 0.4);
   background: linear-gradient(
     135deg,
     rgba(36, 41, 46, 0.15) 0%,
@@ -1023,7 +1079,7 @@ onMounted(() => {
 .timeline-icon {
   position: absolute;
   left: -72px;
-  top: 15px;
+  top: 60px;
   width: 20px;
   height: 20px;
   border-radius: 100%;
