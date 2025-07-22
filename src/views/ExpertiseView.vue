@@ -264,7 +264,7 @@
               <span class="skill-tag canva">
                 <i class="fas fa-paint-brush"></i>
                 Canva
-              </span>  
+              </span>
             </div>
           </div>
         </div>
@@ -285,31 +285,34 @@ onMounted(() => {
   }, 100);
 
   // Add intersection observer for timeline containers
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-      if (entry.isIntersecting) {
-        // Add staggered animation delays
-        setTimeout(() => {
-          entry.target.classList.add('animate-in');
-          
-          // Animate skill tags within the container
-          const skillTags = entry.target.querySelectorAll('.skill-tag');
-          skillTags.forEach((tag, tagIndex) => {
-            setTimeout(() => {
-              tag.classList.add('animate-skill');
-            }, tagIndex * 100);
-          });
-        }, index * 200);
-      }
-    });
-  }, {
-    threshold: 0.3,
-    rootMargin: '0px 0px -50px 0px'
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          // Add staggered animation delays
+          setTimeout(() => {
+            entry.target.classList.add("animate-in");
+
+            // Animate skill tags within the container
+            const skillTags = entry.target.querySelectorAll(".skill-tag");
+            skillTags.forEach((tag, tagIndex) => {
+              setTimeout(() => {
+                tag.classList.add("animate-skill");
+              }, tagIndex * 100);
+            });
+          }, index * 200);
+        }
+      });
+    },
+    {
+      threshold: 0.3,
+      rootMargin: "0px 0px -50px 0px",
+    }
+  );
 
   // Observe timeline containers
   setTimeout(() => {
-    const containers = document.querySelectorAll('.timeline-container');
+    const containers = document.querySelectorAll(".timeline-container");
     containers.forEach((container) => {
       observer.observe(container);
     });
@@ -323,7 +326,11 @@ onMounted(() => {
   color: white;
   min-height: 100%;
   overflow-x: hidden;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.1) 0%,
+    rgba(30, 41, 59, 0.05) 100%
+  );
 }
 
 /* Header Animations */
@@ -352,7 +359,7 @@ onMounted(() => {
 }
 
 .main-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -15px;
   left: 50%;
@@ -1207,13 +1214,18 @@ onMounted(() => {
 }
 
 .timeline-body::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(99, 102, 241, 0.5),
+    transparent
+  );
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -1234,7 +1246,7 @@ onMounted(() => {
 }
 
 .timeline-icon::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1334,14 +1346,14 @@ onMounted(() => {
     transition: none;
     animation: none;
   }
-  
+
   .timeline-container,
   .skill-tag,
   .text-center {
     opacity: 1;
     transform: none;
   }
-  
+
   .timeline:before {
     animation: none;
   }

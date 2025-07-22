@@ -10,20 +10,23 @@ onMounted(() => {
   }, 100);
 
   // Add intersection observer for feature cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-  });
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+        }
+      });
+    },
+    {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    }
+  );
 
   // Observe feature cards
   setTimeout(() => {
-    const cards = document.querySelectorAll('.feature-card');
+    const cards = document.querySelectorAll(".feature-card");
     cards.forEach((card) => {
       observer.observe(card);
     });
@@ -94,11 +97,15 @@ onMounted(() => {
 
 <style scoped>
 .welcome-section {
-  padding: 2rem;  
+  padding: 2rem;
   min-height: 100%;
   width: 1000px;
   overflow-x: hidden;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.1) 0%,
+    rgba(30, 41, 59, 0.05) 100%
+  );
 }
 
 .welcome-text {
@@ -131,7 +138,7 @@ onMounted(() => {
 }
 
 .highlight::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -5px;
   left: 0;
@@ -152,13 +159,13 @@ onMounted(() => {
 }
 
 .welcome-subtitle::before {
-  content: '< ';
+  content: "< ";
   opacity: 0;
   animation: fadeIn 0.5s ease-out 1.8s both;
 }
 
 .welcome-subtitle::after {
-  content: ' />';
+  content: " />";
   opacity: 0;
   animation: fadeIn 0.5s ease-out 1.8s both;
 }
@@ -201,13 +208,18 @@ onMounted(() => {
 
 .cta-primary::before,
 .cta-secondary::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
   transition: left 0.6s ease;
 }
 
@@ -249,7 +261,11 @@ onMounted(() => {
 }
 
 .feature-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.02)
+  );
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
@@ -264,7 +280,7 @@ onMounted(() => {
 }
 
 .feature-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -299,7 +315,11 @@ onMounted(() => {
 
 .feature-card:hover {
   transform: translateY(-10px) scale(1.02);
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.08),
+    rgba(255, 255, 255, 0.03)
+  );
   border-color: rgba(100, 255, 218, 0.4);
   box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
@@ -322,7 +342,7 @@ onMounted(() => {
 }
 
 .feature-icon::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -473,12 +493,12 @@ onMounted(() => {
     transition: none;
     animation: none;
   }
-  
+
   .welcome-text {
     opacity: 1;
     transform: none;
   }
-  
+
   .feature-card {
     opacity: 1;
     transform: none;

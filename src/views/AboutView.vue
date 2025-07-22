@@ -8,7 +8,9 @@
         About Me
       </h1>
       <div class="max-w-4xl mx-auto">
-        <p class="text-xl text-gray-200 leading-relaxed mb-8 font-medium intro-text">
+        <p
+          class="text-xl text-gray-200 leading-relaxed mb-8 font-medium intro-text"
+        >
           I'm a passionate Mobile & Web Application developer focused on
           building real-world projects using modern tools like Flutter and web
           technologies. I enjoy solving problems through clean code, thoughtful
@@ -35,7 +37,8 @@
             YEARS OF LEARNING & BUILDING
           </div>
           <p class="text-gray-300 leading-relaxed">
-            Spent over a year mastering Flutter and modern web technologies through hands-on practice and personal projects.
+            Spent over a year mastering Flutter and modern web technologies
+            through hands-on practice and personal projects.
           </p>
         </div>
 
@@ -57,11 +60,12 @@
           <div
             class="achievement-number text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4"
           >
-             7+
+            7+
           </div>
           <div class="text-xl font-bold mb-3 text-white">COMMUNITY</div>
           <p class="text-gray-300 leading-relaxed">
-           Actively learning, collaborating, and sharing knowledge through online communities, open source, or coding groups.
+            Actively learning, collaborating, and sharing knowledge through
+            online communities, open source, or coding groups.
           </p>
         </div>
       </div>
@@ -153,28 +157,33 @@ onMounted(() => {
   }, 100);
 
   // Add intersection observer for cards
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        
-        // Special handling for achievement cards counter animation
-        if (entry.target.classList.contains('achievement-card')) {
-          const numberElement = entry.target.querySelector('.achievement-number');
-          if (numberElement) {
-            animateCounter(numberElement);
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("animate-in");
+
+          // Special handling for achievement cards counter animation
+          if (entry.target.classList.contains("achievement-card")) {
+            const numberElement = entry.target.querySelector(
+              ".achievement-number"
+            );
+            if (numberElement) {
+              animateCounter(numberElement);
+            }
           }
         }
-      }
-    });
-  }, {
-    threshold: 0.2,
-    rootMargin: '0px 0px -50px 0px'
-  });
+      });
+    },
+    {
+      threshold: 0.2,
+      rootMargin: "0px 0px -50px 0px",
+    }
+  );
 
   // Observe all animated elements
   setTimeout(() => {
-    const cards = document.querySelectorAll('.achievement-card, .pathway-card');
+    const cards = document.querySelectorAll(".achievement-card, .pathway-card");
     cards.forEach((card) => {
       observer.observe(card);
     });
@@ -185,20 +194,20 @@ function animateCounter(element) {
   const target = parseInt(element.textContent);
   const duration = 2000;
   const start = performance.now();
-  
+
   function update(currentTime) {
     const elapsed = currentTime - start;
     const progress = Math.min(elapsed / duration, 1);
     const easeOut = 1 - Math.pow(1 - progress, 3);
     const current = Math.floor(easeOut * target);
-    
-    element.textContent = current + '+';
-    
+
+    element.textContent = current + "+";
+
     if (progress < 1) {
       requestAnimationFrame(update);
     }
   }
-  
+
   requestAnimationFrame(update);
 }
 </script>
@@ -209,7 +218,11 @@ function animateCounter(element) {
   color: white;
   min-height: 100%;
   overflow-x: hidden;
-  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.05) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(15, 23, 42, 0.1) 0%,
+    rgba(30, 41, 59, 0.05) 100%
+  );
 }
 
 /* Header Animations */
@@ -230,7 +243,7 @@ function animateCounter(element) {
 }
 
 .header-title::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -10px;
   left: 50%;
@@ -264,7 +277,7 @@ function animateCounter(element) {
 }
 
 .section-title::before {
-  content: '🚀';
+  content: "🚀";
   position: absolute;
   left: -2rem;
   animation: bounce 2s infinite 2s;
@@ -446,7 +459,7 @@ function animateCounter(element) {
 }
 
 .pathway-icon::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 50%;
   left: 50%;
@@ -579,7 +592,11 @@ function animateCounter(element) {
 }
 
 @keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
     transform: translateY(0);
   }
   40% {
@@ -624,7 +641,7 @@ function animateCounter(element) {
     transition: none;
     animation: none;
   }
-  
+
   .achievement-card,
   .pathway-card,
   .text-center {
