@@ -1,23 +1,22 @@
 <template>
   <div class="about-container">
     <!-- Header Section -->
-    <div class="text-center mb-16">
+    <div class="text-center mb-16" :class="{ 'animate-fade-in': isVisible }">
       <h1
-        class="text-5xl font-bold mb-10 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent"
+        class="text-5xl font-bold mb-10 bg-gradient-to-r from-blue-400 via-purple-500 to-cyan-400 bg-clip-text text-transparent header-title"
       >
         About Me
       </h1>
       <div class="max-w-4xl mx-auto">
-        <p class="text-xl text-gray-200 leading-relaxed mb-8 font-medium">
-          I'm a Mobile & Web Application developer with 3+ years of experience;
-          I develop software using extraordinary abilities, strategy, and design
-          to meet any obstacle.
+        <p class="text-xl text-gray-200 leading-relaxed mb-8 font-medium intro-text">
+          I'm a passionate Mobile & Web Application developer focused on
+          building real-world projects using modern tools like Flutter and web
+          technologies. I enjoy solving problems through clean code, thoughtful
+          design, and continuous learning.
         </p>
-        <p class="text-lg text-gray-300 leading-relaxed">
-          I have worked on a wide range of projects, from simple apps to complex
-          enterprise-level solutions. I am constantly amazed by the power and
-          flexibility of Flutter, and I believe that it is the future of mobile
-          app development.
+        <p class="text-lg text-gray-300 leading-relaxed intro-text-2">
+          I've built a variety of apps through personal and academic projects
+          from simple tools to more complex applications.
         </p>
       </div>
     </div>
@@ -28,42 +27,41 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="achievement-card">
           <div
-            class="text-6xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4"
+            class="achievement-number text-6xl font-bold bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-transparent mb-4"
           >
-            +3
+            1+
           </div>
           <div class="text-xl font-bold mb-3 text-white">
-            YEARS OF EXPERIENCE
+            YEARS OF LEARNING & BUILDING
           </div>
           <p class="text-gray-300 leading-relaxed">
-            Building innovative solutions across various industries and
-            technologies
+            Spent over a year mastering Flutter and modern web technologies through hands-on practice and personal projects.
           </p>
         </div>
 
         <div class="achievement-card">
           <div
-            class="text-6xl font-bold bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent mb-4"
+            class="achievement-number text-6xl font-bold bg-gradient-to-r from-green-400 to-emerald-600 bg-clip-text text-transparent mb-4"
           >
-            +15
+            10+
           </div>
           <div class="text-xl font-bold mb-3 text-white">
-            PROJECTS COMPLETED
+            PERSONAL PROJECTS COMPLETED
           </div>
           <p class="text-gray-300 leading-relaxed">
-            Successfully delivered applications from concept to production
+            Built and deployed multiple mobile and web apps
           </p>
         </div>
 
         <div class="achievement-card">
           <div
-            class="text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4"
+            class="achievement-number text-6xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4"
           >
-            +7
+             7+
           </div>
-          <div class="text-xl font-bold mb-3 text-white">WORLDWIDE CLIENTS</div>
+          <div class="text-xl font-bold mb-3 text-white">COMMUNITY</div>
           <p class="text-gray-300 leading-relaxed">
-            Collaborated with clients across different continents and time zones
+           Actively learning, collaborating, and sharing knowledge through online communities, open source, or coding groups.
           </p>
         </div>
       </div>
@@ -71,11 +69,7 @@
 
     <!-- Strategic Implementation Pathway -->
     <div class="mb-16">
-      <h2
-        class="second-section-title"
-      >
-        Strategic Implementation Pathway
-      </h2>
+      <h2 class="second-section-title">Strategic Implementation Pathway</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         <!-- Planning & Strategy -->
         <div class="pathway-card">
@@ -148,11 +142,65 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+
+const isVisible = ref(false);
 
 onMounted(() => {
-  // Add any animations or interactions here
+  // Trigger initial animations
+  setTimeout(() => {
+    isVisible.value = true;
+  }, 100);
+
+  // Add intersection observer for cards
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate-in');
+        
+        // Special handling for achievement cards counter animation
+        if (entry.target.classList.contains('achievement-card')) {
+          const numberElement = entry.target.querySelector('.achievement-number');
+          if (numberElement) {
+            animateCounter(numberElement);
+          }
+        }
+      }
+    });
+  }, {
+    threshold: 0.2,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Observe all animated elements
+  setTimeout(() => {
+    const cards = document.querySelectorAll('.achievement-card, .pathway-card');
+    cards.forEach((card) => {
+      observer.observe(card);
+    });
+  }, 500);
 });
+
+function animateCounter(element) {
+  const target = parseInt(element.textContent);
+  const duration = 2000;
+  const start = performance.now();
+  
+  function update(currentTime) {
+    const elapsed = currentTime - start;
+    const progress = Math.min(elapsed / duration, 1);
+    const easeOut = 1 - Math.pow(1 - progress, 3);
+    const current = Math.floor(easeOut * target);
+    
+    element.textContent = current + '+';
+    
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+  
+  requestAnimationFrame(update);
+}
 </script>
 
 <style scoped>
@@ -161,6 +209,45 @@ onMounted(() => {
   color: white;
   min-height: 100%;
   overflow-x: hidden;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.05) 100%);
+}
+
+/* Header Animations */
+.text-center {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-center.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.header-title {
+  animation: slideInFromTop 1s ease-out 0.2s both;
+  position: relative;
+}
+
+.header-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #06b6d4);
+  border-radius: 2px;
+  animation: expandFromCenter 1.5s ease-out 1.5s both;
+}
+
+.intro-text {
+  animation: slideInFromLeft 1s ease-out 0.6s both;
+}
+
+.intro-text-2 {
+  animation: slideInFromRight 1s ease-out 0.8s both;
 }
 
 .section-title {
@@ -172,6 +259,15 @@ onMounted(() => {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 2.5rem 0;
+  position: relative;
+  animation: fadeIn 1s ease-out 1s both;
+}
+
+.section-title::before {
+  content: '🚀';
+  position: absolute;
+  left: -2rem;
+  animation: bounce 2s infinite 2s;
 }
 
 .second-section-title {
@@ -183,6 +279,7 @@ onMounted(() => {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin: 2.5rem 0;
+  animation: fadeIn 1s ease-out 1s both;
 }
 
 .achievement-card {
@@ -192,14 +289,17 @@ onMounted(() => {
     rgba(139, 92, 246, 0.05) 50%,
     rgba(59, 130, 246, 0.1) 100%
   );
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(15px);
   border: 1px solid rgba(99, 102, 241, 0.2);
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 2.5rem;
   text-align: center;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(50px) scale(0.9);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .achievement-card::before {
@@ -222,6 +322,23 @@ onMounted(() => {
   left: 100%;
 }
 
+.achievement-card.animate-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.achievement-card:nth-child(1).animate-in {
+  animation: slideInScale 0.8s ease-out 0.1s both;
+}
+
+.achievement-card:nth-child(2).animate-in {
+  animation: slideInScale 0.8s ease-out 0.3s both;
+}
+
+.achievement-card:nth-child(3).animate-in {
+  animation: slideInScale 0.8s ease-out 0.5s both;
+}
+
 .achievement-card:hover {
   background: linear-gradient(
     145deg,
@@ -230,8 +347,16 @@ onMounted(() => {
     rgba(59, 130, 246, 0.15) 100%
   );
   border-color: rgba(99, 102, 241, 0.4);
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.2);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(99, 102, 241, 0.3);
+}
+
+.achievement-number {
+  transition: transform 0.3s ease;
+}
+
+.achievement-card:hover .achievement-number {
+  transform: scale(1.1);
 }
 
 .pathway-card {
@@ -244,13 +369,16 @@ onMounted(() => {
   backdrop-filter: blur(15px);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
   align-items: flex-start;
   gap: 1.5rem;
-  transition: all 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateX(-50px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .pathway-card::after {
@@ -268,6 +396,27 @@ onMounted(() => {
   height: 100%;
 }
 
+.pathway-card.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.pathway-card:nth-child(1).animate-in {
+  animation: slideInFromLeft 0.8s ease-out 0.1s both;
+}
+
+.pathway-card:nth-child(2).animate-in {
+  animation: slideInFromRight 0.8s ease-out 0.2s both;
+}
+
+.pathway-card:nth-child(3).animate-in {
+  animation: slideInFromLeft 0.8s ease-out 0.3s both;
+}
+
+.pathway-card:nth-child(4).animate-in {
+  animation: slideInFromRight 0.8s ease-out 0.4s both;
+}
+
 .pathway-card:hover {
   background: linear-gradient(
     145deg,
@@ -276,8 +425,8 @@ onMounted(() => {
     rgba(255, 255, 255, 0.03) 100%
   );
   border-color: rgba(99, 102, 241, 0.3);
-  transform: translateY(-3px);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px) scale(1.01);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
 .pathway-icon {
@@ -291,12 +440,32 @@ onMounted(() => {
   color: white;
   flex-shrink: 0;
   box-shadow: 0 8px 25px rgba(99, 102, 241, 0.3);
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.pathway-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
 }
 
 .pathway-card:hover .pathway-icon {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 12px 35px rgba(99, 102, 241, 0.4);
+  transform: scale(1.15) rotate(10deg);
+  box-shadow: 0 15px 40px rgba(99, 102, 241, 0.5);
+}
+
+.pathway-card:hover .pathway-icon::before {
+  width: 100%;
+  height: 100%;
 }
 
 .pathway-icon.design {
@@ -305,7 +474,7 @@ onMounted(() => {
 }
 
 .pathway-card:hover .pathway-icon.design {
-  box-shadow: 0 12px 35px rgba(236, 72, 153, 0.4);
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.5);
 }
 
 .pathway-icon.development {
@@ -314,7 +483,7 @@ onMounted(() => {
 }
 
 .pathway-card:hover .pathway-icon.development {
-  box-shadow: 0 12px 35px rgba(6, 182, 212, 0.4);
+  box-shadow: 0 15px 40px rgba(6, 182, 212, 0.5);
 }
 
 .pathway-icon.launch {
@@ -323,11 +492,102 @@ onMounted(() => {
 }
 
 .pathway-card:hover .pathway-icon.launch {
-  box-shadow: 0 12px 35px rgba(16, 185, 129, 0.4);
+  box-shadow: 0 15px 40px rgba(16, 185, 129, 0.5);
 }
 
 .pathway-content {
   flex: 1;
+}
+
+.pathway-content h3 {
+  transition: color 0.3s ease;
+}
+
+.pathway-card:hover .pathway-content h3 {
+  color: #64ffda;
+}
+
+.pathway-content p {
+  transition: color 0.3s ease;
+}
+
+.pathway-card:hover .pathway-content p {
+  color: #a0aec0;
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInScale {
+  from {
+    opacity: 0;
+    transform: translateY(50px) scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes expandFromCenter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 @media (max-width: 768px) {
@@ -338,10 +598,38 @@ onMounted(() => {
   .pathway-card {
     flex-direction: column;
     text-align: center;
+    padding: 2rem;
   }
 
   .pathway-icon {
     margin: 0 auto;
+  }
+
+  .achievement-card {
+    padding: 2rem;
+  }
+
+  .section-title::before {
+    position: static;
+    margin-right: 1rem;
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .achievement-card,
+  .pathway-card,
+  .pathway-icon,
+  .text-center {
+    transition: none;
+    animation: none;
+  }
+  
+  .achievement-card,
+  .pathway-card,
+  .text-center {
+    opacity: 1;
+    transform: none;
   }
 }
 </style>

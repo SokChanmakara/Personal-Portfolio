@@ -6,7 +6,7 @@
         class="nav-item home-link"
         exact-active-class="active"
       >
-        <i class="fas fa-home"></i>
+        <font-awesome-icon :icon="['fas', 'house']" />
         <span>Home</span>
       </router-link>
       <router-link
@@ -14,7 +14,7 @@
         class="nav-item"
         active-class="active"
       >
-        <i class="fas fa-user"></i>
+        <font-awesome-icon :icon="['fas', 'user-tie']" />
         <span>About</span>
       </router-link>
       <router-link
@@ -22,7 +22,7 @@
         class="nav-item"
         active-class="active"
       >
-        <i class="fas fa-code"></i>
+        <font-awesome-icon :icon="['fas', 'code']" />
         <span>Expertise</span>
       </router-link>
       <router-link
@@ -30,7 +30,7 @@
         class="nav-item"
         active-class="active"
       >
-        <i class="fas fa-file-alt"></i>
+        <font-awesome-icon :icon="['fas', 'address-card']" />
         <span>Resume</span>
       </router-link>
       <router-link
@@ -38,15 +38,15 @@
         class="nav-item"
         active-class="active"
       >
-        <i class="fas fa-briefcase"></i>
-        <span>Portfolio</span>
+        <font-awesome-icon :icon="['fas', 'briefcase']" />
+        <span>Project</span>
       </router-link>
       <router-link
         to="/contact"
         class="nav-item"
         active-class="active"
       >
-        <i class="fas fa-envelope"></i>
+        <font-awesome-icon :icon="['fas', 'envelope']" />
         <span>Contact</span>
       </router-link>
     </div>

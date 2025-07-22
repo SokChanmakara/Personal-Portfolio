@@ -1,7 +1,7 @@
 <template>
   <div class="expertise-container">
     <!-- Header Section -->
-    <div class="text-center mb-20">
+    <div class="text-center mb-20" :class="{ 'animate-fade-in': isVisible }">
       <h1 class="main-title">Tech Expertise</h1>
       <p class="subtitle">
         Comprehensive skills across mobile and web development technologies
@@ -274,10 +274,46 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, ref } from "vue";
+
+const isVisible = ref(false);
 
 onMounted(() => {
-  // Add any animations or interactions here
+  // Trigger initial animations
+  setTimeout(() => {
+    isVisible.value = true;
+  }, 100);
+
+  // Add intersection observer for timeline containers
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+      if (entry.isIntersecting) {
+        // Add staggered animation delays
+        setTimeout(() => {
+          entry.target.classList.add('animate-in');
+          
+          // Animate skill tags within the container
+          const skillTags = entry.target.querySelectorAll('.skill-tag');
+          skillTags.forEach((tag, tagIndex) => {
+            setTimeout(() => {
+              tag.classList.add('animate-skill');
+            }, tagIndex * 100);
+          });
+        }, index * 200);
+      }
+    });
+  }, {
+    threshold: 0.3,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  // Observe timeline containers
+  setTimeout(() => {
+    const containers = document.querySelectorAll('.timeline-container');
+    containers.forEach((container) => {
+      observer.observe(container);
+    });
+  }, 500);
 });
 </script>
 
@@ -287,6 +323,19 @@ onMounted(() => {
   color: white;
   min-height: 100%;
   overflow-x: hidden;
+  background: linear-gradient(135deg, rgba(15, 23, 42, 0.1) 0%, rgba(30, 41, 59, 0.05) 100%);
+}
+
+/* Header Animations */
+.text-center {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.text-center.animate-fade-in {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .main-title {
@@ -298,6 +347,21 @@ onMounted(() => {
   background-clip: text;
   margin-bottom: 1rem;
   text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  animation: slideInFromTop 1s ease-out 0.2s both;
+  position: relative;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 5px;
+  background: linear-gradient(90deg, #667eea, #764ba2, #06b6d4);
+  border-radius: 3px;
+  animation: expandFromCenter 1.5s ease-out 1.5s both;
 }
 
 .subtitle {
@@ -307,6 +371,7 @@ onMounted(() => {
   max-width: 600px;
   line-height: 1.6;
   margin: auto;
+  animation: slideInFromBottom 1s ease-out 0.6s both;
 }
 
 .skill-tags {
@@ -330,13 +395,54 @@ onMounted(() => {
   color: #f1f5f9;
   font-size: 0.9rem;
   font-weight: 600;
-  transition: all 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  opacity: 0;
+  transform: translateY(20px) scale(0.9);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .skill-tag::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.skill-tag:hover::before {
+  left: 100%;
+}
+
+.skill-tag.animate-skill {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: bounceIn 0.6s ease-out both;
+}
+
+.skill-tag:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(99, 102, 241, 0.2) 0%,
+    rgba(6, 182, 212, 0.15) 100%
+  );
+  border-color: rgba(6, 182, 212, 0.5);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 12px 30px rgba(6, 182, 212, 0.25);
+}
+
+/* Enhanced specific skill tag colors with better animations */
+.skill-tag.flutter {
   content: "";
   position: absolute;
   top: 0;
@@ -1077,6 +1183,167 @@ onMounted(() => {
   .timeline-title .badge {
     font-size: 12px;
     padding: 4px 8px;
+  }
+}
+
+/* Enhanced timeline animations and effects */
+.timeline-container {
+  position: relative;
+  margin-bottom: 2.5rem;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-container.animate-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.timeline-body {
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.timeline-body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.5), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.timeline-container:hover .timeline-body::after {
+  opacity: 1;
+}
+
+.timeline-container:hover .timeline-body {
+  transform: translateY(-3px) scale(1.01);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.timeline-icon {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.timeline-icon::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.4s ease;
+}
+
+.timeline-container:hover .timeline-icon::before {
+  width: 100%;
+  height: 100%;
+}
+
+.timeline-container:hover .timeline-icon {
+  transform: scale(1.15) rotate(5deg);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
+}
+
+/* Keyframe Animations */
+@keyframes slideInFromTop {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes expandFromCenter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 150px;
+  }
+}
+
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-5px) scale(1.05);
+  }
+  70% {
+    transform: translateY(2px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes timelineGlow {
+  0% {
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+  }
+  25% {
+    box-shadow: 0 0 25px rgba(78, 205, 196, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(69, 183, 209, 0.5);
+  }
+  75% {
+    box-shadow: 0 0 25px rgba(150, 201, 61, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+  }
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .timeline-container,
+  .timeline-icon,
+  .timeline-body,
+  .skill-tag,
+  .text-center {
+    transition: none;
+    animation: none;
+  }
+  
+  .timeline-container,
+  .skill-tag,
+  .text-center {
+    opacity: 1;
+    transform: none;
+  }
+  
+  .timeline:before {
+    animation: none;
   }
 }
 </style>

@@ -6,7 +6,7 @@
       </div>
       <div class="contact-info">
         <span class="contact-label">EMAIL</span>
-        <span class="contact-value">makara@gmail.com</span>
+        <span class="contact-value">sokchanmakara04@gmail.com</span>
       </div>
     </div>
     <div class="contact-item">
@@ -18,7 +18,7 @@
       </div>
       <div class="contact-info">
         <span class="contact-label">LOCATION</span>
-        <span class="contact-value">Phnom Penh City</span>
+        <span class="contact-value">Phnom Penh City, Cambodia</span>
       </div>
     </div>
     <div class="social-container">
