@@ -1,16 +1,8 @@
 <template>
-  <div class="min-h-screen bg-black text-white">
+  <div class="min-h-screen text-white">
     <div class="container mx-auto px-6 py-16">
-      <!-- Header Section -->
-      <div class="text-center mb-16">
-        <h1 class="text-5xl font-bold mb-4">Here's Some Of My Work</h1>
-        <p class="text-xl text-gray-400 max-w-3xl mx-auto">
-          Don't just take my word for it — here's a look at what I've built 🚀
-        </p>
-      </div>
-
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 " style="margin-top: 16px;">
         <!-- Project 1 -->
         <div class="project-card">
           <div class="project-image">
@@ -235,9 +227,9 @@
       </div>
 
       <!-- Call to Action -->
-      <div class="text-center mt-16">
+      <div class="text-center mt-16" style="margin-top: 64px;">
         <h2 class="text-3xl font-bold mb-4">Interested in Working Together?</h2>
-        <p class="text-gray-400 mb-8">
+        <p class="text-gray-400 mb-8" style="margin-bottom: 32px;">
           Let's discuss your next project and bring your ideas to life
         </p>
         <router-link

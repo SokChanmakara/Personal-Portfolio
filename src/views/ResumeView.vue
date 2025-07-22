@@ -277,7 +277,7 @@
 
           <!-- Interests -->
           <section>
-            <div class="flex items-center mb-6">
+            <div class="flex items-center mb-6" style="margin-bottom: 24px;">
               <h2 class="text-2xl font-bold">Interests</h2>
             </div>
             <div class="flex flex-wrap gap-3">

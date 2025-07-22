@@ -28,7 +28,9 @@
             href="https://github.com/SokChanmakara"
             target="_blank"
             rel="noopener"
+            class="social-link"
           >
+            <span class="tooltip-text">GitHub</span>
             <font-awesome-icon :icon="['fab', 'github']" />
           </a>
         </li>
@@ -37,13 +39,21 @@
             href="https://www.linkedin.com/in/sok-chanmakara-3a6300307/"
             target="_blank"
             rel="noopener"
+            class="social-link"
           >
+            <span class="tooltip-text">LinkedIn</span>
             <font-awesome-icon :icon="['fab', 'linkedin']" />
           </a>
         </li>
         <li>
-          <a href="https://t.me/Chanmakaraaa" target="_blank" rel="noopener">
-            <font-awesome-icon icon="fa-brands fa-telegram" />
+          <a
+            href="https://t.me/Chanmakaraaa"
+            target="_blank"
+            rel="noopener"
+            class="social-link"
+          >
+            <span class="tooltip-text">Telegram</span>
+            <font-awesome-icon :icon="['fab', 'telegram']" />
           </a>
         </li>
       </ul>
@@ -124,8 +134,8 @@ export default {
 .social-container {
   display: flex;
   justify-content: center;
-  overflow: hidden;
-  padding: 0 10px;
+  overflow: visible;
+  padding: 20px 10px 0 10px;
 }
 
 .social-list {
@@ -170,6 +180,51 @@ export default {
 
 .social-list li:hover svg {
   color: white;
+}
+.social-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.tooltip-text {
+  position: absolute;
+  bottom: 120%; /* Position it above the icon */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.social-link:hover .tooltip-text {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(-4px);
 }
 
 @media (max-width: 768px) {

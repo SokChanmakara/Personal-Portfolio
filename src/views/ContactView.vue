@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="min-h-screen  text-white relative overflow-hidden"
-  >
-
-
+  <div class="min-h-screen text-white relative overflow-hidden">
     <div class="container mx-auto px-6 py-16 relative z-10">
       <!-- Header Section -->
       <div class="text-center mb-16 header-section">
@@ -15,13 +11,14 @@
         <p
           class="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed animate-slide-up"
         >
-          Currently, Open for work. 
-          Let's discuss your project and
-          create something amazing together.
+          Currently, Open for work. Let's discuss your project and create
+          something amazing together.
         </p>
       </div>
 
-      <div class=" grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto flex justify-center">
+      <div
+        class="grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto flex justify-center"
+      >
         <!-- Contact Form -->
         <div class="contact-form-container animate-slide-left">
           <div class="flex items-center mb-8">
@@ -229,7 +226,10 @@
               <i class="fas fa-lightning-bolt text-yellow-400 mr-2"></i>
               Quick Answers
             </h3>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-3 " style="margin-top: 12px;">
+            <div
+              class="grid grid-cols-1 md:grid-cols-2 gap-3"
+              style="margin-top: 12px"
+            >
               <button
                 v-for="answer in quickAnswers"
                 :key="answer.id"
@@ -780,7 +780,7 @@ const submitForm = async () => {
 }
 
 .contact-form-container {
-  width: 600px;
+  width: 1000px;
 }
 
 .contact-info-container {
