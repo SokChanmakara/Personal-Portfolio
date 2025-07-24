@@ -11,7 +11,7 @@ defineProps({
   profileImage: {
     type: String,
     default:
-      "https://i.pinimg.com/736x/cf/d1/df/cfd1df905cde736fc5bf7704de635d7b.jpg",
+      "../assets/Image/makara.png",
   },
   altText: {
     type: String,

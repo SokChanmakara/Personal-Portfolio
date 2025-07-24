@@ -4,6 +4,7 @@ import { useRoute } from "vue-router";
 import ProfileCard from "./components/ProfileCard.vue";
 import ContactInfo from "./components/ContactInfo.vue";
 import Navbar from "./components/navbar.vue";
+import profileImage from "./assets/Image/makara1.png";
 
 const route = useRoute();
 </script>
@@ -15,7 +16,7 @@ const route = useRoute();
       <ProfileCard
         name="SOK CHANMAKARA"
         title="SOFTWARE DEVELOPER"
-        profile-image="https://i.pinimg.com/736x/cf/d1/df/cfd1df905cde736fc5bf7704de635d7b.jpg"
+        :profile-image="profileImage"
         alt-text="Profile picture"
       >
         <template #sidebar-content>

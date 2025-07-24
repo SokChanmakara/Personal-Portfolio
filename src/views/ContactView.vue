@@ -272,34 +272,34 @@
           <div class="contact-methods">
             <div class="contact-card email-card">
               <div class="contact-card-icon">
-                <i class="fas fa-envelope"></i>
+                <font-awesome-icon icon="fa-solid fa-envelope" />
               </div>
               <div class="contact-card-content">
                 <h3 class="contact-card-title">Email</h3>
                 <a
-                  href="mailto:chanmakara.dev@gmail.com"
+                  href="mailto:sokchanmakara04@gmail.com"
                   class="contact-card-link"
                 >
-                  chanmakara.dev@gmail.com
+                  sokchanmakara04@gmail.com
                 </a>
               </div>
             </div>
 
             <div class="contact-card phone-card">
               <div class="contact-card-icon">
-                <i class="fas fa-phone"></i>
+                <font-awesome-icon icon="fa-solid fa-phone-volume" />
               </div>
               <div class="contact-card-content">
                 <h3 class="contact-card-title">Phone</h3>
                 <a href="tel:+855123456789" class="contact-card-link">
-                  +855 12 345 6789
+                  +855 884003297
                 </a>
               </div>
             </div>
 
             <div class="contact-card location-card">
               <div class="contact-card-icon">
-                <i class="fas fa-map-marker-alt"></i>
+                <font-awesome-icon icon="fa-solid fa-location-dot" />
               </div>
               <div class="contact-card-content">
                 <h3 class="contact-card-title">Location</h3>
@@ -327,7 +327,7 @@
             <h3 class="social-title">Connect with me</h3>
             <div class="social-grid">
               <a
-                href="https://github.com/gitmeas02"
+                href="https://github.com/SokChanmakara"
                 target="_blank"
                 rel="noopener"
                 class="social-button github-btn"
@@ -336,31 +336,13 @@
                 <span class="social-label">GitHub</span>
               </a>
               <a
-                href="https://linkedin.com/in/chanmakara"
+                href="https://www.linkedin.com/in/sok-chanmakara-3a6300307/"
                 target="_blank"
                 rel="noopener"
                 class="social-button linkedin-btn"
               >
                 <i class="fab fa-linkedin"></i>
                 <span class="social-label">LinkedIn</span>
-              </a>
-              <a
-                href="https://twitter.com/chanmakara"
-                target="_blank"
-                rel="noopener"
-                class="social-button twitter-btn"
-              >
-                <i class="fab fa-twitter"></i>
-                <span class="social-label">Twitter</span>
-              </a>
-              <a
-                href="https://instagram.com/chanmakara"
-                target="_blank"
-                rel="noopener"
-                class="social-button instagram-btn"
-              >
-                <i class="fab fa-instagram"></i>
-                <span class="social-label">Instagram</span>
               </a>
             </div>
           </div>
