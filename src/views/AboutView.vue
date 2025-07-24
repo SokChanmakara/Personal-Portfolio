@@ -52,7 +52,7 @@
             PERSONAL PROJECTS COMPLETED
           </div>
           <p class="text-gray-300 leading-relaxed">
-            Built and deployed multiple mobile and web apps
+            Built multiple mobile and web apps
           </p>
         </div>
 

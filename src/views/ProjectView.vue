@@ -2,12 +2,15 @@
   <div class="min-h-screen text-white">
     <div class="container mx-auto px-6 py-16">
       <!-- Projects Grid -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 " style="margin-top: 16px;">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-2 gap-12"
+        style="margin-top: 16px"
+      >
         <!-- Project 1 -->
         <div class="project-card">
           <div class="project-image">
             <img
-              src="https://images.unsplash.com/photo-1551650975-87deedd944c3?w=600&h=400&fit=crop"
+              src="../assets/Image/rumtum.png"
               alt="E-Commerce Platform"
               class="w-full h-64 object-cover rounded-lg"
             />
@@ -18,24 +21,24 @@
             </div>
             <h3 class="text-2xl font-bold mb-3">E-Commerce Platform</h3>
             <p class="text-gray-400 mb-4">
-              Modern e-commerce solution with real-time inventory management and
-              secure payment processing
+              Modern e-commerce solution with real-time inventory management
+              called Rumtum
             </p>
             <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-globe"></i>
-                Website
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
+              <a
+                href="https://github.com/SokChanmakara/Rumtum"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                <font-awesome-icon icon="fa-brands fa-github-alt" />
                 GitHub
               </a>
             </div>
             <div class="tech-stack">
               <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Node.js</span>
-              <span class="tech-tag">MongoDB</span>
-              <span class="tech-tag">Stripe</span>
+              <span class="tech-tag">Javascript</span>
+              <span class="tech-tag">MySQL</span>
             </div>
           </div>
         </div>
@@ -44,35 +47,32 @@
         <div class="project-card">
           <div class="project-image">
             <img
-              src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop"
-              alt="Task Management App"
+              src="../assets/Image/bot.png"
+              alt="Telegram Bot"
               class="w-full h-64 object-cover rounded-lg"
             />
           </div>
           <div class="project-content">
             <div class="project-logo">
-              <div class="logo-placeholder">TM</div>
+              <div class="logo-placeholder">TB</div>
             </div>
-            <h3 class="text-2xl font-bold mb-3">Task Management App</h3>
+            <h3 class="text-2xl font-bold mb-3">Telegram IT Support Bot</h3>
             <p class="text-gray-400 mb-4">
-              Collaborative task management platform with real-time updates and
-              team collaboration features
+              A Ticket Bot For IT Support Teams to manage and track support
             </p>
             <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-globe"></i>
-                Website
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
+              <a
+                href="https://github.com/SokChanmakara/IT-Support-Bot"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                <font-awesome-icon icon="fa-brands fa-github-alt" />
                 GitHub
               </a>
             </div>
             <div class="tech-stack">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Express</span>
-              <span class="tech-tag">Socket.io</span>
-              <span class="tech-tag">PostgreSQL</span>
+              <span class="tech-tag">Python </span>
             </div>
           </div>
         </div>
@@ -81,35 +81,36 @@
         <div class="project-card">
           <div class="project-image">
             <img
-              src="https://images.unsplash.com/photo-1512486130939-2c4f79935e4f?w=600&h=400&fit=crop"
-              alt="Social Media Dashboard"
+              src="../assets/Image/pteskhmer.png"
+              alt="Hotel Booking"
               class="w-full h-64 object-cover rounded-lg"
             />
           </div>
           <div class="project-content">
             <div class="project-logo">
-              <div class="logo-placeholder">SM</div>
+              <div class="logo-placeholder">HB</div>
             </div>
-            <h3 class="text-2xl font-bold mb-3">Social Media Dashboard</h3>
-            <p class="text-gray-400 mb-4">
-              Analytics dashboard for social media management with data
-              visualization and scheduling tools
-            </p>
+            <h3 class="text-2xl font-bold mb-3">Hotel Booking</h3>
+            <p class="text-gray-400 mb-4">Hotel Booking Web Application</p>
             <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-globe"></i>
-                Website
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
+              <a
+                href="https://github.com/gitmeas02/Booking_IP"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                <font-awesome-icon icon="fa-brands fa-github-alt" />
                 GitHub
               </a>
             </div>
             <div class="tech-stack">
               <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">Chart.js</span>
-              <span class="tech-tag">Redis</span>
+              <span class="tech-tag">Laravel</span>
+              <span class="tech-tag">PHP</span>
+              <span class="tech-tag">Javascript</span>
+              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">MinIO</span>
+              <span class="tech-tag">Docker</span>
             </div>
           </div>
         </div>
@@ -118,35 +119,33 @@
         <div class="project-card">
           <div class="project-image">
             <img
-              src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop"
-              alt="Learning Management System"
+              src="../assets/Image/flow.jpg"
+              alt="Mobile E-Commerce"
               class="w-full h-64 object-cover rounded-lg"
             />
           </div>
           <div class="project-content">
             <div class="project-logo">
-              <div class="logo-placeholder">LMS</div>
+              <div class="logo-placeholder">FW</div>
             </div>
-            <h3 class="text-2xl font-bold mb-3">Learning Management System</h3>
+            <h3 class="text-2xl font-bold mb-3">E-Commerce Mobile</h3>
             <p class="text-gray-400 mb-4">
-              Comprehensive LMS with video streaming, progress tracking, and
-              interactive quizzes
+              Flow a mobile E-Commerce application
             </p>
             <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-globe"></i>
-                Website
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
+              <a
+                href="https://github.com/gitmeas02/Mobile_App_Flow"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                <font-awesome-icon icon="fa-brands fa-github-alt" />
                 GitHub
               </a>
             </div>
             <div class="tech-stack">
-              <span class="tech-tag">Next.js</span>
-              <span class="tech-tag">Django</span>
-              <span class="tech-tag">AWS S3</span>
-              <span class="tech-tag">MySQL</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Riverpod</span>
             </div>
           </div>
         </div>
@@ -155,81 +154,44 @@
         <div class="project-card">
           <div class="project-image">
             <img
-              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop"
-              alt="Real Estate Platform"
+              src="../assets/Image/demo.gif"
+              alt="Crud App"
               class="w-full h-64 object-cover rounded-lg"
             />
           </div>
           <div class="project-content">
             <div class="project-logo">
-              <div class="logo-placeholder">RE</div>
+              <div class="logo-placeholder">CA</div>
             </div>
-            <h3 class="text-2xl font-bold mb-3">Real Estate Platform</h3>
-            <p class="text-gray-400 mb-4">
-              Property listing platform with advanced search filters and virtual
-              tour integration
-            </p>
+            <h3 class="text-2xl font-bold mb-3">CRUD APP</h3>
+            <p class="text-gray-400 mb-4">Simple CRUD application</p>
             <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-globe"></i>
-                Website
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
+              <a
+                href="https://github.com/SokChanmakara/Crud-App?tab=readme-ov-file"
+                target="_blank"
+                rel="noopener"
+                class="project-link"
+              >
+                <font-awesome-icon icon="fa-brands fa-github-alt" />
                 GitHub
               </a>
             </div>
             <div class="tech-stack">
-              <span class="tech-tag">React</span>
-              <span class="tech-tag">Laravel</span>
-              <span class="tech-tag">Maps API</span>
-              <span class="tech-tag">MySQL</span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="project-card">
-          <div class="project-image">
-            <img
-              src="https://images.unsplash.com/photo-1586297135537-94bc9ba060aa?w=600&h=400&fit=crop"
-              alt="Weather App"
-              class="w-full h-64 object-cover rounded-lg"
-            />
-          </div>
-          <div class="project-content">
-            <div class="project-logo">
-              <div class="logo-placeholder">WA</div>
-            </div>
-            <h3 class="text-2xl font-bold mb-3">Weather Forecast App</h3>
-            <p class="text-gray-400 mb-4">
-              Beautiful weather application with detailed forecasts and
-              location-based services
-            </p>
-            <div class="project-links">
-              <a href="#" class="project-link">
-                <i class="fas fa-globe"></i>
-                Website
-              </a>
-              <a href="#" class="project-link">
-                <i class="fab fa-github"></i>
-                GitHub
-              </a>
-            </div>
-            <div class="tech-stack">
-              <span class="tech-tag">Vue.js</span>
-              <span class="tech-tag">Weather API</span>
-              <span class="tech-tag">PWA</span>
-              <span class="tech-tag">Geolocation</span>
+              <span class="tech-tag">Flutter</span>
+              <span class="tech-tag">Riverpod</span>
+              <span class="tech-tag">ExpressJS</span>
+              <span class="tech-tag">Docker</span>
             </div>
           </div>
         </div>
       </div>
 
+      <!-- Project 6 -->
+
       <!-- Call to Action -->
-      <div class="text-center mt-16" style="margin-top: 64px;">
+      <div class="text-center mt-16" style="margin-top: 64px">
         <h2 class="text-3xl font-bold mb-4">Interested in Working Together?</h2>
-        <p class="text-gray-400 mb-8" style="margin-bottom: 32px;">
+        <p class="text-gray-400 mb-8" style="margin-bottom: 32px">
           Let's discuss your next project and bring your ideas to life
         </p>
         <router-link
@@ -288,6 +250,7 @@ onMounted(() => {
 .project-links {
   display: flex;
   gap: 1rem;
+  margin-top: 1rem;
   margin-bottom: 1rem;
 }
 
