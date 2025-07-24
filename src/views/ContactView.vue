@@ -1,6 +1,8 @@
 <template>
   <div class="min-h-screen text-white relative overflow-hidden">
-    <div class="container mx-auto px-6 py-16 relative z-10">
+    <div
+      class="container mx-auto px-6 py-16 relative z-10 max-w-full overflow-hidden"
+    >
       <!-- Header Section -->
       <div class="text-center mb-16 header-section">
         <h1
@@ -17,13 +19,15 @@
       </div>
 
       <div
-        class="grid-cols-1 lg:grid-cols-2 gap-12 max-w-7xl mx-auto flex justify-center"
+        class="grid grid-cols-1 xl:grid-cols-5 gap-8 lg:gap-12 max-w-8xl mx-auto px-4"
       >
-        <!-- Contact Form -->
-        <div class="contact-form-container animate-slide-left">
-          <div class="flex items-center mb-8">
+        <!-- Contact Form - Takes 3 columns on xl screens -->
+        <div
+          class="xl:col-span-3 contact-form-container animate-slide-left w-full"
+        >
+          <div class="flex items-center mb-6 md:mb-8">
             <h2
-              class="text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
+              class="text-2xl md:text-3xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"
             >
               Send me a message
             </h2>
@@ -220,14 +224,12 @@
           <div
             class="quick-answers-section mt-8 mb-8 pt-8 border-t border-gray-700/50"
           >
-            <h3
-              class="text-xl font-semibold text-white mb-16 flex items-center"
-            >
+            <h3 class="text-xl font-semibold text-white mb-4 flex items-center">
               <i class="fas fa-lightning-bolt text-yellow-400 mr-2"></i>
               Quick Answers
             </h3>
             <div
-              class="grid grid-cols-1 md:grid-cols-2 gap-3"
+              class="grid grid-cols-1 sm:grid-cols-2 gap-3"
               style="margin-top: 12px"
             >
               <button
@@ -251,6 +253,115 @@
                   </div>
                 </div>
               </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info Section - Takes 2 columns on xl screens -->
+        <div class="xl:col-span-2 contact-info-container animate-slide-right">
+          <!-- Header with enhanced spacing -->
+          <div class="contact-header">
+            <h2 class="contact-title">Get In Touch</h2>
+            <p class="contact-subtitle">
+              Ready to bring your ideas to life? I'm here to help you build
+              amazing digital experiences.
+            </p>
+          </div>
+
+          <!-- Contact Methods with improved cards -->
+          <div class="contact-methods">
+            <div class="contact-card email-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div class="contact-card-content">
+                <h3 class="contact-card-title">Email</h3>
+                <a
+                  href="mailto:chanmakara.dev@gmail.com"
+                  class="contact-card-link"
+                >
+                  chanmakara.dev@gmail.com
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card phone-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-phone"></i>
+              </div>
+              <div class="contact-card-content">
+                <h3 class="contact-card-title">Phone</h3>
+                <a href="tel:+855123456789" class="contact-card-link">
+                  +855 12 345 6789
+                </a>
+              </div>
+            </div>
+
+            <div class="contact-card location-card">
+              <div class="contact-card-icon">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div class="contact-card-content">
+                <h3 class="contact-card-title">Location</h3>
+                <span class="contact-card-text">Phnom Penh, Cambodia</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Enhanced Availability Status -->
+          <div class="availability-card">
+            <div class="availability-header">
+              <div class="status-badge">
+                <div class="status-pulse"></div>
+                <span class="status-label">Available for new projects</span>
+              </div>
+            </div>
+            <p class="availability-text">
+              <i class="fas fa-clock mr-2"></i>
+              Typically responds within 24 hours
+            </p>
+          </div>
+
+          <!-- Enhanced Social Links -->
+          <div class="social-section">
+            <h3 class="social-title">Connect with me</h3>
+            <div class="social-grid">
+              <a
+                href="https://github.com/gitmeas02"
+                target="_blank"
+                rel="noopener"
+                class="social-button github-btn"
+              >
+                <i class="fab fa-github"></i>
+                <span class="social-label">GitHub</span>
+              </a>
+              <a
+                href="https://linkedin.com/in/chanmakara"
+                target="_blank"
+                rel="noopener"
+                class="social-button linkedin-btn"
+              >
+                <i class="fab fa-linkedin"></i>
+                <span class="social-label">LinkedIn</span>
+              </a>
+              <a
+                href="https://twitter.com/chanmakara"
+                target="_blank"
+                rel="noopener"
+                class="social-button twitter-btn"
+              >
+                <i class="fab fa-twitter"></i>
+                <span class="social-label">Twitter</span>
+              </a>
+              <a
+                href="https://instagram.com/chanmakara"
+                target="_blank"
+                rel="noopener"
+                class="social-button instagram-btn"
+              >
+                <i class="fab fa-instagram"></i>
+                <span class="social-label">Instagram</span>
+              </a>
             </div>
           </div>
         </div>
@@ -780,11 +891,17 @@ const submitForm = async () => {
 }
 
 .contact-form-container {
-  width: 1000px;
+  max-width: 100%;
+  width: 100%;
 }
 
 .contact-info-container {
-  width: 500px;
+  max-width: 100%;
+  width: 100%;
+  min-width: 420px;
+  max-width: 480px;
+  padding: 3.5rem;
+  margin-right: 1rem;
 }
 
 .contact-form-container::before,
@@ -937,55 +1054,116 @@ const submitForm = async () => {
   opacity: 0.6;
 }
 
-/* Contact Items */
-.contact-item {
+/* Contact Header Styles */
+.contact-header {
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 1.25rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  white-space: nowrap;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+
+.contact-subtitle {
+  color: rgb(203, 213, 225);
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+/* Contact Methods Grid */
+.contact-methods {
+  margin-bottom: 2rem;
+}
+
+/* Contact Card Styles */
+.contact-card {
   display: flex;
-  align-items: flex-start;
-  gap: 1.5rem;
-  padding: 1.5rem;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 1rem;
   border-radius: 1rem;
   background: linear-gradient(
     135deg,
-    rgba(31, 41, 55, 0.4),
-    rgba(55, 65, 81, 0.4)
+    rgba(31, 41, 55, 0.6),
+    rgba(55, 65, 81, 0.6)
   );
   backdrop-filter: blur(10px);
   border: 1px solid rgba(75, 85, 99, 0.3);
-  transition: all 0.3s ease;
-  margin-bottom: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
   transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out forwards;
 }
 
-.contact-item.animate-in {
-  opacity: 1;
-  transform: translateY(0);
+.contact-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.contact-card:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.contact-card:nth-child(3) {
+  animation-delay: 0.3s;
 }
 
-.contact-item:hover {
-  transform: translateY(-3px);
+.contact-card:hover {
+  transform: translateY(-5px);
   border-color: rgba(99, 102, 241, 0.4);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 41, 55, 0.8),
+    rgba(55, 65, 81, 0.8)
+  );
 }
 
-.contact-icon {
-  width: 3.5rem;
-  height: 3.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  border-radius: 1rem;
+.contact-card-icon {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.75rem;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
+  font-size: 1.125rem;
   flex-shrink: 0;
-  font-size: 1.25rem;
-  box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
   transition: all 0.3s ease;
   position: relative;
   overflow: hidden;
 }
 
-.contact-icon::before {
+.email-card .contact-card-icon {
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  box-shadow: 0 8px 25px rgba(59, 130, 246, 0.3);
+}
+
+.phone-card .contact-card-icon {
+  background: linear-gradient(135deg, #10b981, #059669);
+  box-shadow: 0 8px 25px rgba(16, 185, 129, 0.3);
+}
+
+.location-card .contact-card-icon {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
+}
+
+.contact-card:hover .contact-card-icon {
+  transform: scale(1.1) rotate(10deg);
+}
+
+.contact-card-icon::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -994,76 +1172,260 @@ const submitForm = async () => {
   transition: opacity 0.3s ease;
 }
 
-.contact-item:hover .contact-icon {
-  transform: scale(1.1) rotate(5deg);
-  box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
-}
-
-.contact-item:hover .contact-icon::before {
+.contact-card:hover .contact-card-icon::before {
   opacity: 1;
 }
 
-.contact-item h3 {
+.contact-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card-title {
   color: white;
-  margin-bottom: 0.5rem;
   font-weight: 600;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+  letter-spacing: 0.025em;
 }
 
-.contact-item a {
+.contact-card-link {
   color: rgb(203, 213, 225);
-  transition: color 0.3s ease;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  display: block;
+  word-break: break-all;
 }
 
-.contact-item:hover a {
+.contact-card-link:hover {
   color: rgb(99, 102, 241);
+  transform: translateX(3px);
 }
 
-/* Social Links */
-.social-links {
-  margin-top: 2rem;
-  padding-top: 2rem;
-  border-top: 1px solid rgba(75, 85, 99, 0.3);
+.contact-card-text {
+  color: rgb(203, 213, 225);
+  font-size: 0.9rem;
+  display: block;
 }
 
-.social-link {
-  width: 3.5rem;
-  height: 3.5rem;
+/* Availability Card */
+.availability-card {
+  padding: 1.5rem;
+  margin: 2rem 0;
   border-radius: 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.1),
+    rgba(5, 150, 105, 0.1)
+  );
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out 0.4s forwards;
+}
+
+.availability-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(16, 185, 129, 0.4);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.15);
+}
+
+.availability-header {
+  margin-bottom: 1rem;
+}
+
+.status-badge {
   display: flex;
   align-items: center;
-  justify-content: center;
-  color: rgb(156, 163, 175);
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.2),
+    rgba(5, 150, 105, 0.2)
+  );
+  border-radius: 0.75rem;
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.status-pulse {
+  width: 0.75rem;
+  height: 0.75rem;
+  background: #10b981;
+  border-radius: 50%;
   position: relative;
-  overflow: hidden;
-  font-size: 1.25rem;
-  border: 1px solid rgba(75, 85, 99, 0.3);
+  animation: pulse 2s infinite;
+}
+
+.status-pulse::before {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: ping 2s infinite;
+  opacity: 0.3;
+}
+
+.status-label {
+  color: #10b981;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.025em;
+}
+
+.availability-text {
+  color: rgb(203, 213, 225);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+
+.availability-text i {
+  color: rgb(156, 163, 175);
+}
+
+/* Social Section */
+.social-section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(75, 85, 99, 0.3);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideInUp 0.6s ease-out 0.5s forwards;
+}
+
+.social-title {
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 0.025em;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+}
+
+.social-button {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1rem;
+  border-radius: 0.75rem;
   background: linear-gradient(
     135deg,
     rgba(31, 41, 55, 0.6),
     rgba(55, 65, 81, 0.6)
   );
+  border: 1px solid rgba(75, 85, 99, 0.3);
+  color: rgb(203, 213, 225);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
 }
 
-.social-link::before {
+.social-button::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, var(--social-color), transparent);
+  background: linear-gradient(135deg, var(--social-bg), transparent);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
-.social-link:hover {
-  color: white;
-  transform: translateY(-3px) scale(1.1);
+.social-button:hover {
+  transform: translateY(-3px);
   border-color: var(--social-color);
-  box-shadow: 0 10px 25px rgba(var(--social-rgb), 0.4);
+  box-shadow: 0 10px 25px rgba(var(--social-rgb), 0.25);
+  color: white;
 }
 
-.social-link:hover::before {
-  opacity: 0.2;
+.social-button:hover::before {
+  opacity: 0.1;
+}
+
+.social-button i {
+  font-size: 1.125rem;
+  transition: transform 0.3s ease;
+  z-index: 1;
+  position: relative;
+}
+
+.social-button:hover i {
+  transform: scale(1.2);
+  color: var(--social-color);
+}
+
+.social-label {
+  font-weight: 500;
+  font-size: 0.875rem;
+  z-index: 1;
+  position: relative;
+}
+
+/* Social Platform Colors */
+.github-btn {
+  --social-color: #333;
+  --social-rgb: 51, 51, 51;
+  --social-bg: rgba(51, 51, 51, 0.2);
+}
+
+.linkedin-btn {
+  --social-color: #0077b5;
+  --social-rgb: 0, 119, 181;
+  --social-bg: rgba(0, 119, 181, 0.2);
+}
+
+.twitter-btn {
+  --social-color: #1da1f2;
+  --social-rgb: 29, 161, 242;
+  --social-bg: rgba(29, 161, 242, 0.2);
+}
+
+.instagram-btn {
+  --social-color: #e4405f;
+  --social-rgb: 228, 64, 95;
+  --social-bg: rgba(228, 64, 95, 0.2);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ping {
+  75%,
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
 }
 
 /* Quick Answers Styles */
@@ -1091,22 +1453,6 @@ const submitForm = async () => {
 .quick-answer-btn:active {
   transform: translateY(0);
   transition-duration: 0.1s;
-}
-
-/* Social Media Color Variables */
-.social-link.github {
-  --social-color: #333;
-  --social-rgb: 51, 51, 51;
-}
-
-.social-link.linkedin {
-  --social-color: #0077b5;
-  --social-rgb: 0, 119, 181;
-}
-
-.social-link.twitter {
-  --social-color: #1da1f2;
-  --social-rgb: 29, 161, 242;
 }
 
 .social-link.instagram {
@@ -1268,44 +1614,267 @@ const submitForm = async () => {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
+  .container {
+    max-width: 95%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
   .contact-form-container,
   .contact-info-container {
-    padding: 2rem 1.5rem;
-    width: 100%;
+    padding: 2.75rem 2.5rem;
+  }
+
+  .contact-info-container {
+    min-width: 350px;
+    max-width: none;
+    margin-right: 0.75rem;
+  }
+
+  .contact-title {
+    font-size: 1.875rem;
+  }
+}
+
+@media (max-width: 1280px) {
+  .grid.grid-cols-1.xl\\:grid-cols-5 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 0 1rem;
+  }
+
+  .xl\\:col-span-3 {
+    grid-column: span 1;
+  }
+
+  .xl\\:col-span-2 {
+    grid-column: span 1;
+  }
+
+  .header-section h1 {
+    font-size: 5rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 2.5rem 2.25rem;
+  }
+
+  .contact-info-container {
+    min-width: 300px;
+    max-width: none;
+    margin-right: 0;
+  }
+
+  .contact-title {
+    font-size: 1.75rem;
+  }
+
+  .social-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .header-section h1 {
+    font-size: 4.5rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 2.25rem 2rem;
+  }
+
+  .grid.grid-cols-1.xl\\:grid-cols-5 {
+    gap: 2rem;
+  }
+
+  .quick-answers-section .grid.grid-cols-1.sm\\:grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .header-section h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .header-section p {
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 2rem 1.75rem;
+  }
+
+  .grid.grid-cols-1.xl\\:grid-cols-5 {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    max-width: 100%;
+  }
+
+  .xl\\:col-span-3 {
+    grid-column: span 1;
+  }
+
+  .xl\\:col-span-2 {
+    grid-column: span 1;
+  }
+
+  .quick-answers-section .grid.grid-cols-1.sm\\:grid-cols-2 {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  /* Tiny screen contact info */
+  .contact-title {
+    font-size: 1.125rem;
+    white-space: nowrap;
+  }
+
+  .contact-subtitle {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .min-h-screen {
+    padding-top: 1rem;
+  }
+
+  .container {
+    padding: 0 1.5rem;
+  }
+
+  .header-section {
+    margin-bottom: 2rem;
   }
 
   .header-section h1 {
     font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
   }
 
   .header-section p {
     font-size: 1rem;
-  }
-
-  .contact-item {
-    flex-direction: column;
-    text-align: center;
-    gap: 1rem;
-    padding: 1rem;
-  }
-
-  .contact-icon {
+    max-width: 100%;
     margin: 0 auto;
   }
 
-  .faq-item h4 {
-    flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
+  .contact-form-container,
+  .contact-info-container {
+    padding: 2rem 1.5rem;
+    width: 100%;
+    margin-top: 0;
+    border-radius: 1.5rem;
+    min-width: unset;
+    margin-right: 0;
   }
 
-  .faq-item p {
-    margin-left: 0;
+  .grid.grid-cols-1.xl\\:grid-cols-5 {
+    gap: 1.5rem;
+    padding: 0;
+  }
+
+  /* Contact Info Section Mobile Styles */
+  .contact-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    white-space: nowrap;
+  }
+
+  .contact-subtitle {
+    font-size: 0.9rem;
+    max-width: 100%;
+  }
+
+  .contact-card {
+    padding: 1rem;
+    gap: 0.875rem;
+  }
+
+  .contact-card-icon {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 1rem;
+  }
+
+  .contact-card-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.125rem;
+  }
+
+  .contact-card-link,
+  .contact-card-text {
+    font-size: 0.85rem;
+  }
+
+  .availability-card {
+    padding: 1.25rem;
+    margin: 1.5rem 0;
+  }
+
+  .status-badge {
+    gap: 0.625rem;
+    padding: 0.625rem 0.875rem;
+  }
+
+  .status-pulse {
+    width: 0.625rem;
+    height: 0.625rem;
+  }
+
+  .status-label {
+    font-size: 0.85rem;
+  }
+
+  .availability-text {
+    font-size: 0.85rem;
+  }
+
+  .social-section {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+  }
+
+  .social-title {
+    font-size: 1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.625rem;
+  }
+
+  .social-button {
+    gap: 0.625rem;
+    padding: 0.75rem 0.875rem;
+  }
+
+  .social-button i {
+    font-size: 1rem;
+  }
+
+  .social-label {
+    font-size: 0.8rem;
   }
 
   .form-input {
     padding: 0.875rem 1rem;
+    font-size: 1rem;
   }
 
   .submit-button {
@@ -1325,34 +1894,416 @@ const submitForm = async () => {
     font-size: 0.75rem;
   }
 
-  .social-links .grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-  }
-
-  .social-link {
-    width: 3rem;
-    height: 3rem;
-    font-size: 1rem;
-  }
-
-  /* Toast notifications for mobile */
+  /* Toast notifications for tablet */
   .fixed.top-6.right-6 {
     top: 1rem;
     right: 1rem;
     left: 1rem;
-    right: 1rem;
+    max-width: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  .header-section h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .header-section p {
+    font-size: 0.95rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 1.75rem 1.25rem;
+    border-radius: 1.25rem;
+  }
+
+  /* Contact Info Section Small Mobile */
+  .contact-title {
+    font-size: 1.375rem;
+    white-space: nowrap;
+  }
+
+  .contact-subtitle {
+    font-size: 0.875rem;
+  }
+
+  .contact-card {
+    padding: 0.875rem;
+    gap: 0.75rem;
+  }
+
+  .contact-card-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  .availability-card {
+    padding: 1rem;
+  }
+
+  .social-button {
+    padding: 0.625rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .social-button i {
+    font-size: 0.95rem;
+  }
+
+  .social-label {
+    font-size: 0.75rem;
+  }
+
+  .form-input {
+    padding: 0.8rem 0.95rem;
+    font-size: 0.975rem;
+  }
+
+  .submit-button {
+    padding: 0.8rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .quick-answer-btn {
+    padding: 0.7rem;
+  }
+
+  .contact-item {
+    padding: 0.875rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .contact-icon {
+    margin: 0 auto;
+  }
+
+  .social-links .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .social-link {
+    width: 2.75rem;
+    height: 2.75rem;
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 480px) {
+  .py-16 {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .container {
+    padding: 0 0.5rem;
+  }
+
+  .header-section {
+    margin-bottom: 1.5rem;
+  }
+
   .header-section h1 {
     font-size: 2rem;
+    margin-bottom: 0.875rem;
+    line-height: 1.1;
+  }
+
+  .header-section p {
+    font-size: 0.9rem;
+    line-height: 1.5;
   }
 
   .contact-form-container,
   .contact-info-container {
     padding: 1.5rem 1rem;
+    border-radius: 1rem;
+  }
+
+  /* Ultra-small mobile contact info */
+  .contact-title {
+    font-size: 1.125rem;
+    margin-bottom: 0.5rem;
+    white-space: nowrap;
+  }
+
+  .contact-subtitle {
+    font-size: 0.825rem;
+    line-height: 1.5;
+  }
+
+  .contact-header {
+    margin-bottom: 2rem;
+  }
+
+  .contact-card {
+    padding: 0.75rem;
+    gap: 0.625rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .contact-card-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.875rem;
+    border-radius: 0.625rem;
+  }
+
+  .contact-card-title {
+    font-size: 0.825rem;
+  }
+
+  .contact-card-link,
+  .contact-card-text {
+    font-size: 0.8rem;
+  }
+
+  .availability-card {
+    padding: 0.875rem;
+    margin: 1.25rem 0;
+  }
+
+  .status-badge {
+    padding: 0.5rem 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .status-pulse {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+
+  .status-label {
+    font-size: 0.8rem;
+  }
+
+  .availability-text {
+    font-size: 0.8rem;
+  }
+
+  .social-section {
+    margin-top: 1.75rem;
+    padding-top: 1.25rem;
+  }
+
+  .social-title {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+
+  .social-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .social-button {
+    padding: 0.5rem 0.625rem;
+    gap: 0.375rem;
+    border-radius: 0.625rem;
+  }
+
+  .social-button i {
+    font-size: 0.875rem;
+  }
+
+  .social-label {
+    font-size: 0.7rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .form-label {
+    font-size: 0.875rem;
+    margin-bottom: 0.625rem;
+  }
+
+  .form-input {
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    border-radius: 0.75rem;
+  }
+
+  .submit-button {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+    border-radius: 0.75rem;
+  }
+
+  .quick-answers-section {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .quick-answers-section h3 {
+    font-size: 1rem;
+    margin-bottom: 0.875rem;
+  }
+
+  .quick-answer-btn {
+    padding: 0.65rem;
+    border-radius: 0.75rem;
+  }
+
+  .quick-answer-btn h4 {
+    font-size: 0.8rem;
+  }
+
+  .quick-answer-btn p {
+    font-size: 0.7rem;
+  }
+
+  .contact-item {
+    padding: 0.75rem;
+    border-radius: 0.75rem;
+  }
+
+  .contact-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 1rem;
+    border-radius: 0.75rem;
+  }
+
+  .social-links .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .social-link {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.875rem;
+    border-radius: 0.75rem;
+  }
+
+  /* Mobile toast notifications */
+  .fixed.top-6.right-6 {
+    top: 0.75rem;
+    right: 0.75rem;
+    left: 0.75rem;
+    padding: 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .container {
+    padding: 0 0.375rem;
+  }
+
+  .header-section h1 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .header-section p {
+    font-size: 0.85rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 1.25rem 0.875rem;
+  }
+
+  .form-input {
+    padding: 0.7rem 0.875rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-button {
+    padding: 0.7rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .quick-answer-btn {
+    padding: 0.6rem;
+  }
+
+  .contact-item {
+    padding: 0.65rem;
+  }
+
+  .contact-icon {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.9rem;
+  }
+
+  .social-link {
+    width: 2.25rem;
+    height: 2.25rem;
+    font-size: 0.8rem;
+  }
+}
+
+/* Landscape orientation for mobile devices */
+@media (max-height: 600px) and (orientation: landscape) {
+  .py-16 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .header-section {
+    margin-bottom: 1rem;
+  }
+
+  .header-section h1 {
+    font-size: 2.25rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .contact-form-container,
+  .contact-info-container {
+    padding: 1.5rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.25rem;
+  }
+}
+
+/* Large screens optimization for wider form */
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1400px;
+  }
+
+  .header-section h1 {
+    font-size: 7rem;
+  }
+
+  .header-section p {
+    font-size: 1.375rem;
+  }
+
+  .contact-form_container,
+  .contact-info-container {
+    padding: 3.5rem;
+  }
+
+  .form-input {
+    padding: 1.25rem 1.5rem;
+    font-size: 1.125rem;
+  }
+
+  .submit-button {
+    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  .quick-answers-section .grid.grid-cols-1.sm\\:grid-cols-2 {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
   }
 }
 
@@ -1362,6 +2313,68 @@ const submitForm = async () => {
     animation-duration: 0.01ms !important;
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .quick-answer-btn:hover {
+    transform: none;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.15);
+  }
+
+  .contact-item:hover {
+    transform: none;
+  }
+
+  .contact-form-container:hover,
+  .contact-info-container:hover {
+    transform: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  }
+
+  .submit-button:hover:not(:disabled) {
+    transform: none;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+  }
+
+  .form-input:focus {
+    transform: none;
+  }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .form-input {
+    border-width: 0.5px;
+  }
+
+  .contact-item {
+    border-width: 0.5px;
+  }
+
+  .quick-answer-btn {
+    border-width: 0.5px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .contact-form-container {
+    box-shadow: none;
+    border: 1px solid #ccc;
+    page-break-inside: avoid;
+  }
+
+  .quick-answers-section {
+    display: none;
+  }
+
+  .animate-slide-left,
+  .animate-slide-right,
+  .animate-fade-in {
+    opacity: 1;
+    transform: none;
   }
 }
 </style>

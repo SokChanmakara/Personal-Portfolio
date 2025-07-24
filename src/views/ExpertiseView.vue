@@ -211,23 +211,43 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag localstorage">
-                <img src="../assets/ImageIcon/storage.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/storage.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Local Storage
               </span>
               <span class="skill-tag sqlite">
-                <img src="../assets/ImageIcon/sqlite.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/sqlite.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 SQLite
               </span>
               <span class="skill-tag hive">
-                <img src="../assets/ImageIcon/hive.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/hive.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Hive
               </span>
               <span class="skill-tag mysql">
-                <img src="../assets/ImageIcon/mysql.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/mysql.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 MySQL
               </span>
               <span class="skill-tag postgresql">
-                <img src="../assets/ImageIcon/postgreql.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/postgreql.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 PostgreSQL
               </span>
             </div>
@@ -248,11 +268,19 @@
                 Git
               </span>
               <span class="skill-tag github">
-                <img src="../assets/ImageIcon/github.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/github.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Github
               </span>
               <span class="skill-tag gitlab">
-                <img src="../assets/ImageIcon/gitlab.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/gitlab.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Gitlab
               </span>
             </div>
@@ -269,19 +297,35 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag vscode">
-                <img src="../assets/ImageIcon/vscode.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/vscode.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Visual Studio Code
               </span>
               <span class="skill-tag android-studio">
-                <img src="../assets/ImageIcon/androidstudio.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/androidstudio.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Android Studio
               </span>
               <span class="skill-tag docker">
-                <img src="../assets/ImageIcon/docker.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/docker.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Docker
               </span>
               <span class="skill-tag jenkins">
-                <img src="../assets/ImageIcon/jenkins.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/jenkins.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Jenkins
               </span>
               <span class="skill-tag kubernetes">
@@ -289,11 +333,19 @@
                 Kubernetes
               </span>
               <span class="skill-tag minio">
-                <img src="../assets/ImageIcon/minio.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/minio.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 MinIO
               </span>
               <span class="skill-tag minio">
-                <img src="../assets/ImageIcon/dbeaver.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/dbeaver.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Dbeaver
               </span>
             </div>
@@ -310,15 +362,27 @@
             </h4>
             <div class="skill-tags">
               <span class="skill-tag figma">
-                <img src="../assets/ImageIcon/figma.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/figma.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Figma
               </span>
               <span class="skill-tag balsamiq">
-                <img src="../assets/ImageIcon/balsamiq.png" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/balsamiq.png"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Balsamiq
               </span>
               <span class="skill-tag canva">
-                <img src="../assets/ImageIcon/canva.svg" alt="" class="w-8 h-8" />
+                <img
+                  src="../assets/ImageIcon/canva.svg"
+                  alt=""
+                  class="w-8 h-8"
+                />
                 Canva
               </span>
             </div>
@@ -1211,13 +1275,51 @@ onMounted(() => {
   box-shadow: 0 4px 15px rgba(233, 30, 99, 0.4);
 }
 
+@media (max-width: 1024px) {
+  .expertise-container {
+    padding: 1.5rem;
+  }
+
+  .main-title {
+    font-size: 3rem;
+  }
+
+  .timeline-body {
+    padding: 1.5rem;
+  }
+
+  .skill-tags {
+    gap: 0.75rem;
+  }
+}
+
 @media (max-width: 768px) {
   .expertise-container {
     padding: 1rem;
   }
 
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
   .skill-tags {
     justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .skill-tag {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+
+  .skill-tag img {
+    width: 1.25rem;
+    height: 1.25rem;
   }
 
   /* Responsive timeline adjustments */
@@ -1246,6 +1348,66 @@ onMounted(() => {
   .timeline-title .badge {
     font-size: 12px;
     padding: 4px 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .expertise-container {
+    padding: 0.75rem;
+  }
+
+  .main-title {
+    font-size: 2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .subtitle {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .timeline {
+    padding-left: 2.5rem;
+    margin-left: 10px;
+  }
+
+  .timeline-icon {
+    left: -50px;
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+
+  .timeline-body {
+    padding: 1rem;
+  }
+
+  .timeline-title {
+    font-size: 1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .timeline-title .badge {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+
+  .skill-tags {
+    gap: 0.375rem;
+  }
+
+  .skill-tag {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .skill-tag img {
+    width: 1rem;
+    height: 1rem;
+  }
+
+  .timeline-container {
+    margin-bottom: 2rem;
   }
 }
 

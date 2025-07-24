@@ -47,7 +47,7 @@ const route = useRoute();
 .main-layout {
   display: flex;
   gap: 20px;
-  max-width: 1400px;
+  max-width: 1600px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
@@ -122,14 +122,56 @@ const route = useRoute();
 }
 
 /* Responsive Design */
+@media (max-width: 1200px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .main-layout {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 768px) {
+  .app-container {
+    padding: 10px;
+  }
+
   .main-layout {
     flex-direction: column;
+    gap: 15px;
   }
 
   .quick-stats {
     grid-template-columns: 1fr;
     text-align: center;
+  }
+
+  .main-content-wrapper {
+    min-height: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .app-container {
+    padding: 5px;
+  }
+
+  .main-layout {
+    gap: 10px;
+  }
+
+  .quick-stats {
+    padding: 1rem;
+    gap: 0.75rem;
+  }
+
+  .stat-number {
+    font-size: 1.25rem;
+  }
+
+  .stat-label {
+    font-size: 0.7rem;
   }
 }
 </style>

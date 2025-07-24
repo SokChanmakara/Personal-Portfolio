@@ -220,20 +220,31 @@ defineProps({
 }
 
 /* Responsive breakpoints */
+@media (max-width: 1200px) {
+  .sidebar {
+    max-width: 320px;
+    min-width: 260px;
+  }
+}
+
 @media (max-width: 1024px) {
   .sidebar {
     position: relative;
     top: auto;
     max-height: none;
+    max-width: 300px;
+    min-width: 240px;
   }
 }
 
 @media (max-width: 768px) {
   .sidebar {
     max-width: 100%;
+    min-width: 100%;
     margin: 0 auto;
     position: relative;
     top: auto;
+    padding: 25px 20px;
   }
 
   .image img {
@@ -243,6 +254,15 @@ defineProps({
 
   .name p {
     font-size: 1.2rem;
+  }
+
+  .name-container {
+    padding: 20px 0;
+  }
+
+  .title p {
+    font-size: 0.75rem;
+    padding: 8px 16px;
   }
 }
 

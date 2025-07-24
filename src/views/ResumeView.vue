@@ -101,35 +101,32 @@
                   Information and Communication Engineering
                 </h3>
                 <div class="education-info">
-                  <span class="university">Institute of Technology of Cambodia</span>
+                  <span class="university"
+                    >Institute of Technology of Cambodia</span
+                  >
                   <span class="duration">2021 - Present</span>
                 </div>
               </div>
               <p class="education-details">
-                Relevant coursework: Data Structures,
-                Algorithms, Web Development, MObile Devlopement, Database Systems, Software
+                Relevant coursework: Data Structures, Algorithms, Web
+                Development, MObile Devlopement, Database Systems, Software
                 Engineering.
               </p>
             </div>
-          </section> 
+          </section>
           <!-- Diploma -->
           <section class="group">
             <div class="education-item">
               <div class="education-header">
-                <h3 class="text-xl font-bold">
-                  High School
-                </h3>
+                <h3 class="text-xl font-bold">High School</h3>
                 <div class="education-info">
                   <span class="university">Sonthormok High School</span>
                   <span class="duration">2018 - 2021</span>
                 </div>
               </div>
-              <p class="education-details">
-                General knowledge
-              </p>
+              <p class="education-details">General knowledge</p>
             </div>
           </section>
-
         </div>
 
         <!-- Right Column -->
@@ -277,7 +274,7 @@
 
           <!-- Interests -->
           <section>
-            <div class="flex items-center mb-6" style="margin-bottom: 24px;">
+            <div class="flex items-center mb-6" style="margin-bottom: 24px">
               <h2 class="text-2xl font-bold">Interests</h2>
             </div>
             <div class="flex flex-wrap gap-3">
@@ -534,7 +531,7 @@ onMounted(() => {
 .skill-category {
   margin-bottom: 3rem;
   padding: 2rem;
-  margin-top:1rem;
+  margin-top: 1rem;
   background: linear-gradient(
     135deg,
     rgba(15, 23, 42, 0.6),
@@ -694,7 +691,34 @@ onMounted(() => {
 }
 
 /* Responsive improvements */
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .text-center h1 {
+    font-size: 4rem;
+  }
+
+  .experience-item,
+  .education-item {
+    padding: 2rem;
+  }
+
+  .skill-category {
+    padding: 1.75rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .text-center h1 {
+    font-size: 2.5rem;
+  }
+
   .company-info,
   .education-info {
     flex-direction: column;
@@ -714,6 +738,95 @@ onMounted(() => {
 
   .skill-category {
     padding: 1.5rem;
+  }
+
+  .experience-header h3,
+  .education-header h3 {
+    font-size: 1.25rem;
+  }
+
+  .company-name,
+  .university {
+    font-size: 1rem;
+  }
+
+  .experience-details li {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
+  }
+
+  .skill-item span {
+    font-size: 1rem;
+  }
+
+  .interest-tag {
+    padding: 0.6rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .text-center {
+    margin-bottom: 2rem;
+  }
+
+  .text-center h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .experience-item,
+  .education-item {
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .skill-category {
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .experience-header h3,
+  .education-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .experience-details li {
+    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+  }
+
+  .skill-item {
+    margin-bottom: 1rem;
+  }
+
+  .skill-item span {
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .skill-bar {
+    height: 0.6rem;
+  }
+
+  .interest-tag {
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .language-item {
+    padding: 0.75rem;
+    font-size: 0.9rem;
+  }
+
+  .section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
   }
 }
 

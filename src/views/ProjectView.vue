@@ -286,9 +286,89 @@ onMounted(() => {
   font-weight: 500;
 }
 
+@media (max-width: 1024px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  .project-card {
+    margin-bottom: 1.5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .project-content {
+    padding: 1.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.5rem;
+  }
+
+  .project-card p {
+    font-size: 0.9rem;
+  }
+
+  .tech-stack {
+    gap: 0.375rem;
+  }
+
+  .tech-tag {
+    font-size: 0.7rem;
+    padding: 0.2rem 0.6rem;
+  }
+
   .project-links {
-    flex-direction: column;
+    margin: 0.75rem 0;
+  }
+
+  .project-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0.75rem;
+  }
+
+  .project-content {
+    padding: 1.25rem;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .project-card p {
+    font-size: 0.85rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .logo-placeholder {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 0.85rem;
+  }
+
+  .tech-stack {
+    flex-wrap: wrap;
+    gap: 0.25rem;
+  }
+
+  .tech-tag {
+    font-size: 0.65rem;
+    padding: 0.15rem 0.5rem;
+  }
+
+  .project-image img {
+    height: 200px;
   }
 }
 </style>

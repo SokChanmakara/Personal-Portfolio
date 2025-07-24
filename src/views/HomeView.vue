@@ -99,7 +99,8 @@ onMounted(() => {
 .welcome-section {
   padding: 2rem;
   min-height: 100%;
-  width: 1000px;
+  max-width: 1000px;
+  width: 100%;
   overflow-x: hidden;
   background: linear-gradient(
     135deg,
@@ -256,7 +257,7 @@ onMounted(() => {
 
 .feature-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
 }
 
@@ -439,6 +440,26 @@ onMounted(() => {
 }
 
 /* Responsive Design */
+@media (max-width: 1024px) {
+  .welcome-section {
+    max-width: 100%;
+    padding: 1.5rem;
+  }
+
+  .welcome-title {
+    font-size: 3.5rem;
+  }
+
+  .feature-cards {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+}
+
 @media (max-width: 768px) {
   .welcome-section {
     padding: 1.5rem;
@@ -451,6 +472,7 @@ onMounted(() => {
   .cta-buttons {
     flex-direction: column;
     align-items: stretch;
+    gap: 1rem;
   }
 
   .cta-primary,
@@ -467,6 +489,42 @@ onMounted(() => {
   .feature-card {
     padding: 2rem;
   }
+
+  .feature-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .feature-card p {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .feature-card {
+    padding: 1.75rem;
+  }
+
+  .feature-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    font-size: 0.8rem;
+    line-height: 1.5;
+  }
 }
 
 @media (max-width: 480px) {
@@ -480,6 +538,64 @@ onMounted(() => {
 
   .welcome-section {
     padding: 1rem;
+  }
+
+  .cta-primary,
+  .cta-secondary {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .feature-icon {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card p {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: 360px) {
+  .feature-cards {
+    gap: 1rem;
+  }
+
+  .feature-card {
+    padding: 1.25rem;
+  }
+
+  .feature-icon {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .feature-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .feature-card p {
+    font-size: 0.85rem;
   }
 }
 

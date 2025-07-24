@@ -78,7 +78,10 @@
         <!-- Planning & Strategy -->
         <div class="pathway-card">
           <div class="pathway-icon">
-            <font-awesome-icon icon="fa-solid fa-magnifying-glass" class="text-2xl"/>
+            <font-awesome-icon
+              icon="fa-solid fa-magnifying-glass"
+              class="text-2xl"
+            />
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -94,7 +97,7 @@
         <!-- Pixel-Perfect UI/UX Design -->
         <div class="pathway-card">
           <div class="pathway-icon design">
-            <font-awesome-icon icon="fa-solid fa-palette" class="text-2xl"/>
+            <font-awesome-icon icon="fa-solid fa-palette" class="text-2xl" />
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -128,7 +131,7 @@
         <!-- Launch & Post-Launch Support -->
         <div class="pathway-card">
           <div class="pathway-icon launch">
-            <font-awesome-icon icon="fa-solid fa-rocket" class="text-2xl"/>
+            <font-awesome-icon icon="fa-solid fa-rocket" class="text-2xl" />
           </div>
           <div class="pathway-content">
             <h3 class="text-xl font-bold mb-4 text-white">
@@ -608,9 +611,43 @@ function animateCounter(element) {
   }
 }
 
+@media (max-width: 1024px) {
+  .about-container {
+    padding: 1.5rem;
+  }
+
+  .header-title {
+    font-size: 3.5rem;
+  }
+
+  .achievement-card {
+    padding: 2.5rem;
+  }
+
+  .pathway-card {
+    padding: 2rem;
+  }
+
+  .achievement-number {
+    font-size: 4rem;
+  }
+}
+
 @media (max-width: 768px) {
   .about-container {
     padding: 1rem;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.1rem;
+  }
+
+  .intro-text-2 {
+    font-size: 1rem;
   }
 
   .pathway-card {
@@ -620,16 +657,76 @@ function animateCounter(element) {
   }
 
   .pathway-icon {
-    margin: 0 auto;
+    margin: 0 auto 1rem auto;
   }
 
   .achievement-card {
     padding: 2rem;
+    text-align: center;
+  }
+
+  .achievement-number {
+    font-size: 3rem;
   }
 
   .section-title::before {
     position: static;
     margin-right: 1rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .second-section-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-container {
+    padding: 0.75rem;
+  }
+
+  .header-title {
+    font-size: 2rem;
+  }
+
+  .intro-text {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .intro-text-2 {
+    font-size: 0.95rem;
+  }
+
+  .achievement-card {
+    padding: 1.5rem;
+  }
+
+  .pathway-card {
+    padding: 1.5rem;
+  }
+
+  .achievement-number {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pathway-icon {
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .pathway-content h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .pathway-content p {
+    font-size: 0.9rem;
   }
 }
 
